@@ -1,0 +1,27 @@
+# Индексация разрешена всем, включая поисковых ботов ИИ-ассистентов (ChatGPT, Claude, Perplexity, Gemini).
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# TODO: заменить домен
+Sitemap: https://twojadomena.pl/sitemap.xml
