@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow"><!-- TEST: usunąć przed startem -->
 
-  <title>DiLa — Wdrożenia AI dla małych i średnich firm | Digital Lab</title>
-  <meta name="description" content="Wdrażamy AI w małych i średnich firmach: audyt pracy zespołu, asystenci AI, integracje poczty, CRM, Fakturowni i arkuszy, statystyki, szkolenia i RODO. Człowiek zatwierdza, AI przejmuje rutynę.">
+  <title data-i18n="meta.title">DiLa — Wdrożenia AI dla małych i średnich firm | Digital Lab</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Wdrażamy AI w małych i średnich firmach: audyt pracy zespołu, asystenci AI, integracje poczty, CRM, Fakturowni i arkuszy, statystyki, szkolenia i RODO. Człowiek zatwierdza, AI przejmuje rutynę.">
   <meta name="theme-color" content="#0f1720">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,11 +16,13 @@
   <!-- Open Graph (TODO: podmienić domenę i dodać obrazek og-image.png 1200×630) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
-  <meta property="og:title" content="AI, które naprawdę odciąża zespół — DiLa">
-  <meta property="og:description" content="Od audytu pracy zespołu do działających automatyzacji: poczta, wyceny, CRM, faktury, statystyki. Człowiek zatwierdza, AI przejmuje rutynę.">
+  <meta property="og:title" data-i18n-attr="content:og.title" content="AI, które naprawdę odciąża zespół — DiLa">
+  <meta property="og:description" data-i18n-attr="content:og.desc" content="Od audytu pracy zespołu do działających automatyzacji: poczta, wyceny, CRM, faktury, statystyki. Człowiek zatwierdza, AI przejmuje rutynę.">
   <meta property="og:url" content="https://twojadomena.pl/">
 
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <!-- Wybrany język (nie-polski): ukryj stronę do czasu podmiany tekstów, żeby nie mignął polski. Zabezpieczenie: 2,5 s. -->
+  <script>(function(){try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('dila-lang');if(/^(en|uk|ru)$/.test(l)){document.documentElement.classList.add('i18n-pending');setTimeout(function(){document.documentElement.classList.remove('i18n-pending')},2500)}}catch(e){}})();</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,7 +37,7 @@
   </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Przejdź do treści</a>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Przejdź do treści</a>
 
 <!-- ===================== Ikony (sprite) ===================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -73,7 +75,7 @@
 <!-- ===================== Header ===================== -->
 <header class="header" id="top">
   <div class="wrap header__inner">
-    <a class="brand" href="#top" aria-label="DiLa — Digital Lab, strona główna">
+    <a class="brand" href="#top" aria-label="DiLa — Digital Lab, strona główna" data-i18n-attr="aria-label:a11y.brand">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect class="m-bg" width="40" height="40" rx="10"/>
         <path class="m-fg" d="M11 10h8.5C26.4 10 31 14.1 31 20s-4.6 10-11.5 10H11V10zm5 4.4v11.2h3.3c3.9 0 6.5-2.2 6.5-5.6s-2.6-5.6-6.5-5.6H16z"/>
@@ -81,16 +83,22 @@
       </svg>
       <span class="brand__text"><span class="brand__name">DiLa</span><span class="brand__sub">Digital Lab</span></span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
-    <nav class="nav" id="nav" aria-label="Główna nawigacja">
-      <a href="#problem">Problem</a>
-      <a href="#uslugi">Usługi</a>
-      <a href="#rozwiazanie">Przykład</a>
-      <a href="#zasady">Bezpieczeństwo</a>
-      <a href="#proces">Współpraca</a>
-      <a href="#cennik">Cennik</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav" data-i18n-attr="aria-label:a11y.menu"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Główna nawigacja" data-i18n-attr="aria-label:a11y.nav">
+      <a href="#problem" data-i18n="nav.problem">Problem</a>
+      <a href="#uslugi" data-i18n="nav.services">Usługi</a>
+      <a href="#rozwiazanie" data-i18n="nav.example">Przykład</a>
+      <a href="#zasady" data-i18n="nav.security">Bezpieczeństwo</a>
+      <a href="#proces" data-i18n="nav.process">Współpraca</a>
+      <a href="#cennik" data-i18n="nav.pricing">Cennik</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn--sm" href="#kontakt">Umów rozmowę</a>
+      <a class="btn btn--sm" href="#kontakt" data-i18n="nav.cta">Umów rozmowę</a>
+      <div class="lang" role="group" aria-label="Język / Language">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UK</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -101,31 +109,27 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div>
-      <p class="label reveal">Wdrożenia AI dla małych i średnich firm</p>
-      <h1 class="h1 reveal reveal-d1">AI, które <em>naprawdę</em> odciąża Twój zespół.</h1>
-      <p class="hero__lead reveal reveal-d2">
-        Zaczynamy od audytu pracy każdej osoby w firmie. Potem budujemy <strong>asystentów AI, integracje
-        i&nbsp;automatyzacje</strong> dopasowane do Twoich procesów: poczta, wyceny, CRM, faktury, arkusze, statystyki.
-        Rutynę przejmuje AI, decyzje zostają przy ludziach.
-      </p>
+      <p class="label reveal" data-i18n="hero.label">Wdrożenia AI dla małych i średnich firm</p>
+      <h1 class="h1 reveal reveal-d1" data-i18n="hero.h1">AI, które <em>naprawdę</em> odciąża Twój zespół.</h1>
+      <p class="hero__lead reveal reveal-d2" data-i18n="hero.lead">Zaczynamy od audytu pracy każdej osoby w firmie. Potem budujemy <strong>asystentów AI, integracje i&nbsp;automatyzacje</strong> dopasowane do Twoich procesów: poczta, wyceny, CRM, faktury, arkusze, statystyki. Rutynę przejmuje AI, decyzje zostają przy ludziach.</p>
       <div class="hero__cta reveal reveal-d3">
-        <a class="btn" href="#kontakt">Umów bezpłatną rozmowę <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn--ghost" href="#uslugi">Zobacz zakres usług</a>
+        <a class="btn" href="#kontakt"><span data-i18n="hero.cta1">Umów bezpłatną rozmowę</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="#uslugi" data-i18n="hero.cta2">Zobacz zakres usług</a>
       </div>
       <ul class="hero__trust reveal reveal-d4">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Człowiek zatwierdza ważne decyzje</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Działa z Twoimi systemami</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zgodnie z RODO</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t1">Człowiek zatwierdza ważne decyzje</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t2">Działa z Twoimi systemami</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t3">Zgodnie z RODO</span></li>
       </ul>
     </div>
 
-    <!-- Demo na żywo: animowane w main.js; bez JS pokazuje stan końcowy -->
+    <!-- Demo na żywo: animowane w main.js (teksty scenariuszy z słownika języka); bez JS pokazuje stan końcowy -->
     <div class="reveal reveal-d2">
-      <div class="demo" id="demo" aria-label="Przykład: asystent przetwarza zapytanie ofertowe" role="img">
+      <div class="demo" id="demo" aria-label="Przykład: asystent przetwarza zapytanie ofertowe" role="img" data-i18n-attr="aria-label:demo.aria">
         <div class="demo__bar">
           <span class="demo__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="demo__title">skrzynka / zapytania</span>
-          <span class="demo__timer">czas: <b id="demo-time">0:28</b></span>
+          <span class="demo__title" data-i18n="demo.title">skrzynka / zapytania</span>
+          <span class="demo__timer"><span data-i18n="demo.time">czas:</span> <b id="demo-time">0:28</b></span>
         </div>
         <div class="demo__body">
           <article class="mail" id="demo-mail">
@@ -151,15 +155,15 @@
 
           <div class="demo__human">
             <span class="demo__human-text" id="demo-human"><b>Twoja decyzja:</b> sprawdź szkic i wyślij</span>
-            <span class="demo__send"><svg aria-hidden="true"><use href="#i-send"/></svg>Wyślij</span>
+            <span class="demo__send"><svg aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="demo.send">Wyślij</span></span>
           </div>
         </div>
       </div>
-      <div class="demo__switch" id="demo-switch" aria-label="Przykłady">
-        <button type="button" aria-pressed="true" aria-label="Przykład 1: zapytanie po polsku"></button>
-        <button type="button" aria-pressed="false" aria-label="Przykład 2: zapytanie po niemiecku"></button>
+      <div class="demo__switch" id="demo-switch" aria-label="Przykłady" data-i18n-attr="aria-label:demo.examples">
+        <button type="button" aria-pressed="true" aria-label="Przykład 1: zapytanie po polsku" data-i18n-attr="aria-label:demo.ex1"></button>
+        <button type="button" aria-pressed="false" aria-label="Przykład 2: zapytanie po niemiecku" data-i18n-attr="aria-label:demo.ex2"></button>
       </div>
-      <p class="demo__caption">Przykład: obsługa zapytania ofertowego. Dane poglądowe.</p>
+      <p class="demo__caption" data-i18n="demo.caption">Przykład: obsługa zapytania ofertowego. Dane poglądowe.</p>
     </div>
   </div>
 </section>
@@ -167,15 +171,15 @@
 <!-- Dla kogo -->
 <div class="for-strip">
   <div class="wrap for-strip__inner">
-    <span class="for-strip__k">Pracujemy m.in. z branżami</span>
+    <span class="for-strip__k" data-i18n="for.k">Pracujemy m.in. z branżami</span>
     <ul class="for-strip__list">
-      <li>Gadżety reklamowe</li>
-      <li>Drukarnie</li>
-      <li>Opakowania</li>
-      <li>Meble i produkcja na zamówienie</li>
-      <li>Hurtownie</li>
-      <li>Sklepy i sprzedawcy na Allegro</li>
-      <li>Transport i spedycja</li>
+      <li data-i18n="for.1">Gadżety reklamowe</li>
+      <li data-i18n="for.2">Drukarnie</li>
+      <li data-i18n="for.3">Opakowania</li>
+      <li data-i18n="for.4">Meble i produkcja na zamówienie</li>
+      <li data-i18n="for.5">Hurtownie</li>
+      <li data-i18n="for.6">Sklepy i sprzedawcy na Allegro</li>
+      <li data-i18n="for.7">Transport i spedycja</li>
     </ul>
   </div>
 </div>
@@ -185,46 +189,39 @@
   <div class="wrap">
     <div class="problem__grid">
       <div class="problem__intro">
-        <p class="label reveal">01 — Problem</p>
-        <h2 class="h2 reveal reveal-d1">Zespół jest zajęty. <em>Tylko</em> nie tym, co rozwija firmę.</h2>
-        <p class="lead reveal reveal-d2">
-          W małej firmie każdy robi kilka rzeczy naraz. Spora część dnia to rutyna: te same odpowiedzi,
-          przepisywanie danych, szukanie informacji, przekopywanie skrzynki. A klient, który czeka,
-          idzie do tego, kto odpowie pierwszy.
-        </p>
-        <p class="problem__note reveal reveal-d3">
-          <strong>To nie jest wina ludzi.</strong> Oni po prostu robią ręcznie pracę, którą dziś można
-          oddać AI. Obok: jak wygląda droga jednego zapytania ofertowego w typowej firmie.
-        </p>
+        <p class="label reveal" data-i18n="pr.label">01 — Problem</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="pr.h2">Zespół jest zajęty. <em>Tylko</em> nie tym, co rozwija firmę.</h2>
+        <p class="lead reveal reveal-d2" data-i18n="pr.lead">W małej firmie każdy robi kilka rzeczy naraz. Spora część dnia to rutyna: te same odpowiedzi, przepisywanie danych, szukanie informacji, przekopywanie skrzynki. A klient, który czeka, idzie do tego, kto odpowie pierwszy.</p>
+        <p class="problem__note reveal reveal-d3" data-i18n="pr.note"><strong>To nie jest wina ludzi.</strong> Oni po prostu robią ręcznie pracę, którą dziś można oddać AI. Obok: jak wygląda droga jednego zapytania ofertowego w typowej firmie.</p>
       </div>
 
-      <div class="timeline reveal reveal-d2" aria-label="Typowy dzień jednego zapytania">
-        <div class="timeline__head"><span>Przykład · jedno zapytanie ofertowe</span><span>wtorek</span></div>
+      <div class="timeline reveal reveal-d2" aria-label="Typowy dzień jednego zapytania" data-i18n-attr="aria-label:tl.aria">
+        <div class="timeline__head"><span data-i18n="tl.head">Przykład · jedno zapytanie ofertowe</span><span data-i18n="tl.day">wtorek</span></div>
         <div class="tl-row">
           <span class="tl-time">08:12</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Klient wysyła zapytanie</div><div class="tl-desc">Do Ciebie i do dwóch innych dostawców.</div></div>
+          <div><div class="tl-title" data-i18n="tl.1t">Klient wysyła zapytanie</div><div class="tl-desc" data-i18n="tl.1d">Do Ciebie i do dwóch innych dostawców.</div></div>
         </div>
         <div class="tl-row tl-row--rival">
           <span class="tl-time">08:47</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Konkurencja już odpowiedziała <span class="tl-tag">z ceną</span></div><div class="tl-desc">Klient ma pierwszą ofertę na stole.</div></div>
+          <div><div class="tl-title" data-i18n="tl.2t">Konkurencja już odpowiedziała <span class="tl-tag">z ceną</span></div><div class="tl-desc" data-i18n="tl.2d">Klient ma pierwszą ofertę na stole.</div></div>
         </div>
         <div class="tl-row">
           <span class="tl-time">09:30</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Handlowiec odpisuje na wczorajsze maile</div><div class="tl-desc">Nowe zapytanie czeka w kolejce.</div></div>
+          <div><div class="tl-title" data-i18n="tl.3t">Handlowiec odpisuje na wczorajsze maile</div><div class="tl-desc" data-i18n="tl.3d">Nowe zapytanie czeka w kolejce.</div></div>
         </div>
         <div class="tl-row">
           <span class="tl-time">11:05</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Otwiera zapytanie, szuka cennika</div><div class="tl-desc">Excel, kalkulator na stronie, wyjątki „w głowie”.</div></div>
+          <div><div class="tl-title" data-i18n="tl.4t">Otwiera zapytanie, szuka cennika</div><div class="tl-desc" data-i18n="tl.4d">Excel, kalkulator na stronie, wyjątki „w głowie”.</div></div>
         </div>
         <div class="tl-row">
           <span class="tl-time">11:40</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Brakuje danych o nadruku</div><div class="tl-desc">Dopytuje klienta. Czeka na odpowiedź.</div></div>
+          <div><div class="tl-title" data-i18n="tl.5t">Brakuje danych o nadruku</div><div class="tl-desc" data-i18n="tl.5d">Dopytuje klienta. Czeka na odpowiedź.</div></div>
         </div>
         <div class="tl-row tl-row--end">
           <span class="tl-time">13:40</span><span class="tl-dot"></span>
-          <div><div class="tl-title">Oferta wysłana</div><div class="tl-desc">Potem jeszcze przepisanie danych do CRM.</div></div>
+          <div><div class="tl-title" data-i18n="tl.6t">Oferta wysłana</div><div class="tl-desc" data-i18n="tl.6d">Potem jeszcze przepisanie danych do CRM.</div></div>
         </div>
-        <div class="timeline__foot"><span>Czas do pierwszej odpowiedzi: <b>5 h 28 min</b></span><span>Z asystentem: <b>szkic w ~1 min</b></span></div>
+        <div class="timeline__foot"><span data-i18n="tl.f1">Czas do pierwszej odpowiedzi: <b>5 h 28 min</b></span><span data-i18n="tl.f2">Z asystentem: <b>szkic w ~1 min</b></span></div>
       </div>
     </div>
 
@@ -232,38 +229,38 @@
       <article class="pain reveal">
         <span class="pain__n">01</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-repeat"/></svg>
-        <h3>Skrzynka pełna szumu</h3>
-        <p>Spam, powiadomienia i te same pytania o terminy czy nakłady. Ktoś codziennie przekopuje się przez to ręcznie i odpisuje od nowa.</p>
+        <h3 data-i18n="pain.1t">Skrzynka pełna szumu</h3>
+        <p data-i18n="pain.1d">Spam, powiadomienia i te same pytania o terminy czy nakłady. Ktoś codziennie przekopuje się przez to ręcznie i odpisuje od nowa.</p>
       </article>
       <article class="pain reveal reveal-d1">
         <span class="pain__n">02</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-calc"/></svg>
-        <h3>Ręczna wycena</h3>
-        <p>Cennik w Excelu, kalkulator na stronie, a wyjątki zna tylko jedna osoba. Każda wycena to kilkanaście minut i ryzyko pomyłki.</p>
+        <h3 data-i18n="pain.2t">Ręczna wycena</h3>
+        <p data-i18n="pain.2d">Cennik w Excelu, kalkulator na stronie, a wyjątki zna tylko jedna osoba. Każda wycena to kilkanaście minut i ryzyko pomyłki.</p>
       </article>
       <article class="pain reveal reveal-d2">
         <span class="pain__n">03</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-chart"/></svg>
-        <h3>Decyzje na wyczucie</h3>
-        <p>Ile było zapytań w tym miesiącu? Ile ofert przepadło i dlaczego? Kto w zespole jest przeciążony? Bez liczb trudno to powiedzieć.</p>
+        <h3 data-i18n="pain.3t">Decyzje na wyczucie</h3>
+        <p data-i18n="pain.3d">Ile było zapytań w tym miesiącu? Ile ofert przepadło i dlaczego? Kto w zespole jest przeciążony? Bez liczb trudno to powiedzieć.</p>
       </article>
       <article class="pain reveal">
         <span class="pain__n">04</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-copy"/></svg>
-        <h3>Przepisywanie danych</h3>
-        <p>Z maila do CRM, z CRM do arkusza, z arkusza do faktury. Godziny tygodniowo na pracę, która nie sprzedaje.</p>
+        <h3 data-i18n="pain.4t">Przepisywanie danych</h3>
+        <p data-i18n="pain.4d">Z maila do CRM, z CRM do arkusza, z arkusza do faktury. Godziny tygodniowo na pracę, która nie sprzedaje.</p>
       </article>
       <article class="pain reveal reveal-d1">
         <span class="pain__n">05</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-hourglass"/></svg>
-        <h3>Cisza po godzinach i po ofercie</h3>
-        <p>Klient pisze wieczorem i czeka do rana. Oferta wysłana, ale nikt nie ma czasu przypomnieć się po trzech dniach. Sprzedaż przepada po cichu.</p>
+        <h3 data-i18n="pain.5t">Cisza po godzinach i po ofercie</h3>
+        <p data-i18n="pain.5d">Klient pisze wieczorem i czeka do rana. Oferta wysłana, ale nikt nie ma czasu przypomnieć się po trzech dniach. Sprzedaż przepada po cichu.</p>
       </article>
       <article class="pain reveal reveal-d2">
         <span class="pain__n">06</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-head"/></svg>
-        <h3>Wiedza w jednej głowie</h3>
-        <p>Gdy kluczowa osoba jest na urlopie albo chorobowym, zapytania czekają. Firma nie rośnie szybciej niż jej skrzynka.</p>
+        <h3 data-i18n="pain.6t">Wiedza w jednej głowie</h3>
+        <p data-i18n="pain.6d">Gdy kluczowa osoba jest na urlopie albo chorobowym, zapytania czekają. Firma nie rośnie szybciej niż jej skrzynka.</p>
       </article>
     </div>
   </div>
@@ -274,45 +271,42 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">02 — Policz sam</p>
-        <h2 class="h2 reveal reveal-d1">Ile kosztuje Cię rutyna w zespole?</h2>
+        <p class="label reveal" data-i18n="calc.label">02 — Policz sam</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="calc.h2">Ile kosztuje Cię rutyna w zespole?</h2>
       </div>
-      <p class="lead reveal reveal-d2">Przesuń suwaki i wpisz realia swojej firmy. Wynik to czas, który dziś płacisz za pracę możliwą do zautomatyzowania.</p>
+      <p class="lead reveal reveal-d2" data-i18n="calc.lead">Przesuń suwaki i wpisz realia swojej firmy. Wynik to czas, który dziś płacisz za pracę możliwą do zautomatyzowania.</p>
     </div>
 
     <div class="calc reveal">
       <form class="calc__inputs" id="calc" onsubmit="return false">
         <div class="field-range">
-          <label for="c-q">Powtarzalnych zadań dziennie <output for="c-q" id="o-q">20</output></label>
+          <label for="c-q"><span data-i18n="calc.q">Powtarzalnych zadań dziennie</span> <output for="c-q" id="o-q">20</output></label>
           <input type="range" id="c-q" min="2" max="200" step="1" value="20">
-          <small>Typowe maile, wyceny, wpisy do CRM i arkuszy, sortowanie skrzynki, raporty.</small>
+          <small data-i18n="calc.qh">Typowe maile, wyceny, wpisy do CRM i arkuszy, sortowanie skrzynki, raporty.</small>
         </div>
         <div class="field-range">
-          <label for="c-m">Minut na jedno zadanie <output for="c-m" id="o-m">12 min</output></label>
+          <label for="c-m"><span data-i18n="calc.m">Minut na jedno zadanie</span> <output for="c-m" id="o-m">12 min</output></label>
           <input type="range" id="c-m" min="3" max="45" step="1" value="12">
-          <small>Średnio, razem z szukaniem informacji i przełączaniem się między programami.</small>
+          <small data-i18n="calc.mh">Średnio, razem z szukaniem informacji i przełączaniem się między programami.</small>
         </div>
         <div class="field-range">
-          <label for="c-r">Koszt godziny pracy <output for="c-r" id="o-r">60 zł</output></label>
+          <label for="c-r"><span data-i18n="calc.r">Koszt godziny pracy</span> <output for="c-r" id="o-r">60 zł</output></label>
           <input type="range" id="c-r" min="30" max="150" step="5" value="60">
-          <small>Pełny koszt pracodawcy w przeliczeniu na godzinę.</small>
+          <small data-i18n="calc.rh">Pełny koszt pracodawcy w przeliczeniu na godzinę.</small>
         </div>
       </form>
 
       <div class="calc__result" aria-live="polite">
-        <span class="calc__k">Miesięcznie na rutynę</span>
-        <div class="calc__big"><span id="r-hours">84</span><small>godz.</small></div>
-        <p class="calc__sub">To <b id="r-cost">5&nbsp;040 zł</b> miesięcznie i około <b id="r-fte">0,5</b> etatu.</p>
+        <span class="calc__k" data-i18n="calc.k1">Miesięcznie na rutynę</span>
+        <div class="calc__big"><span id="r-hours">84</span><small data-i18n="calc.hunit">godz.</small></div>
+        <p class="calc__sub" data-i18n="calc.sub">To <b id="r-cost">5&nbsp;040 zł</b> miesięcznie i około <b id="r-fte">0,5</b> etatu.</p>
         <div class="calc__divider"></div>
-        <span class="calc__k">Jeśli asystent przejmie 60% tej pracy</span>
+        <span class="calc__k" data-i18n="calc.k2">Jeśli asystent przejmie 60% tej pracy</span>
         <div class="calc__save">
-          <div><div class="calc__sub">Odzyskany czas</div><div class="calc__save-v" id="r-shours">50 h</div></div>
-          <div><div class="calc__sub">Wartość miesięcznie</div><div class="calc__save-v" id="r-scost">3 024 zł</div></div>
+          <div><div class="calc__sub" data-i18n="calc.s1">Odzyskany czas</div><div class="calc__save-v" id="r-shours">50 h</div></div>
+          <div><div class="calc__sub" data-i18n="calc.s2">Wartość miesięcznie</div><div class="calc__save-v" id="r-scost">3 024 zł</div></div>
         </div>
-        <p class="calc__assume">
-          Założenia: 21 dni roboczych, 168 godzin na etat. 60% to ostrożne założenie do rozmowy — dokładną wartość
-          dla Twojej firmy ustalamy w&nbsp;audycie, na prawdziwych danych. <a href="#kontakt">Sprawdźmy to razem →</a>
-        </p>
+        <p class="calc__assume" data-i18n="calc.assume">Założenia: 21 dni roboczych, 168 godzin na etat. 60% to ostrożne założenie do rozmowy — dokładną wartość dla Twojej firmy ustalamy w&nbsp;audycie, na prawdziwych danych. <a href="#kontakt">Sprawdźmy to razem →</a></p>
       </div>
     </div>
   </div>
@@ -323,98 +317,95 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">03 — Usługi</p>
-        <h2 class="h2 reveal reveal-d1">Pełne wdrożenie AI — <em>od audytu</em> po opiekę.</h2>
+        <p class="label reveal" data-i18n="sv.label">03 — Usługi</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="sv.h2">Pełne wdrożenie AI — <em>od audytu</em> po opiekę.</h2>
       </div>
-      <p class="lead reveal reveal-d2">
-        Nie sprzedajemy gotowego pudełka. Najpierw sprawdzamy, gdzie Twój zespół traci czas,
-        potem budujemy rozwiązania pod Twoje procesy i ludzi. Możesz zacząć od jednego etapu.
-      </p>
+      <p class="lead reveal reveal-d2" data-i18n="sv.lead">Nie sprzedajemy gotowego pudełka. Najpierw sprawdzamy, gdzie Twój zespół traci czas, potem budujemy rozwiązania pod Twoje procesy i ludzi. Możesz zacząć od jednego etapu.</p>
     </div>
 
     <ol class="svc-list">
       <li class="svc reveal">
         <span class="svc__n">01</span>
-        <h3 class="svc__t">Audyt pracy zespołu</h3>
+        <h3 class="svc__t" data-i18n="sv.1t">Audyt pracy zespołu</h3>
         <div class="svc__d">
-          <p>Przyglądamy się pracy każdej osoby — na żywo albo z nagrania ekranu, za zgodą pracowników. Dostajesz listę zadań do automatyzacji, uszeregowaną według zysku i trudności.</p>
-          <ul class="svc__tags"><li>rozmowy z zespołem</li><li>mapa procesów</li><li>priorytety</li></ul>
+          <p data-i18n="sv.1d">Przyglądamy się pracy każdej osoby — na żywo albo z nagrania ekranu, za zgodą pracowników. Dostajesz listę zadań do automatyzacji, uszeregowaną według zysku i trudności.</p>
+          <ul class="svc__tags"><li data-i18n="sv.1a">rozmowy z zespołem</li><li data-i18n="sv.1b">mapa procesów</li><li data-i18n="sv.1c">priorytety</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">02</span>
-        <h3 class="svc__t">Środowisko AI dla firmy</h3>
+        <h3 class="svc__t" data-i18n="sv.2t">Środowisko AI dla firmy</h3>
         <div class="svc__d">
-          <p>Dobieramy narzędzia i modele, budujemy wspólne środowisko AI z podziałem na role: sprzedaż, obsługa klienta, grafika, zarząd. Każdy ma swoje instrukcje i narzędzia, a wiedza firmy jest w jednym miejscu.</p>
-          <ul class="svc__tags"><li>role i instrukcje</li><li>baza wiedzy</li><li>polityka korzystania z AI</li><li>optymalizacja kosztów</li></ul>
+          <p data-i18n="sv.2d">Dobieramy narzędzia i modele, budujemy wspólne środowisko AI z podziałem na role: sprzedaż, obsługa klienta, grafika, zarząd. Każdy ma swoje instrukcje i narzędzia, a wiedza firmy jest w jednym miejscu.</p>
+          <ul class="svc__tags"><li data-i18n="sv.2a">role i instrukcje</li><li data-i18n="sv.2b">baza wiedzy</li><li data-i18n="sv.2c">polityka korzystania z AI</li><li data-i18n="sv.2e">optymalizacja kosztów</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">03</span>
-        <h3 class="svc__t">Automatyzacje i integracje</h3>
+        <h3 class="svc__t" data-i18n="sv.3t">Automatyzacje i integracje</h3>
         <div class="svc__d">
-          <p>Asystenci AI, boty i autoodpowiedzi w potrzebnych językach. Łączymy systemy, które dziś nie rozmawiają ze sobą: pocztę, stronę i kalkulator cen, arkusze, CRM, Fakturownię, kurierów.</p>
-          <ul class="svc__tags"><li>asystenci AI</li><li>konektory</li><li>autoodpowiedzi</li><li>wiele języków</li></ul>
+          <p data-i18n="sv.3d">Asystenci AI, boty i autoodpowiedzi w potrzebnych językach. Łączymy systemy, które dziś nie rozmawiają ze sobą: pocztę, stronę i kalkulator cen, arkusze, CRM, Fakturownię, kurierów.</p>
+          <ul class="svc__tags"><li data-i18n="sv.3a">asystenci AI</li><li data-i18n="sv.3b">konektory</li><li data-i18n="sv.3c">autoodpowiedzi</li><li data-i18n="sv.3e">wiele języków</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">04</span>
-        <h3 class="svc__t">Dane i statystyki</h3>
+        <h3 class="svc__t" data-i18n="sv.4t">Dane i statystyki</h3>
         <div class="svc__d">
-          <p>Automatyczne zbieranie danych o zapytaniach, zamówieniach, klientach, problemach i pracy zespołu — w czytelnym panelu. Baza rozwiązanych przypadków rośnie z każdym zamówieniem, więc asystent z czasem obsługuje sam coraz więcej spraw, a granica „automat czy człowiek” przesuwa się na podstawie wyników.</p>
-          <ul class="svc__tags"><li>panel dla zarządu</li><li>baza przypadków</li><li>reguły automat / człowiek</li></ul>
+          <p data-i18n="sv.4d">Automatyczne zbieranie danych o zapytaniach, zamówieniach, klientach, problemach i pracy zespołu — w czytelnym panelu. Baza rozwiązanych przypadków rośnie z każdym zamówieniem, więc asystent z czasem obsługuje sam coraz więcej spraw, a granica „automat czy człowiek” przesuwa się na podstawie wyników.</p>
+          <ul class="svc__tags"><li data-i18n="sv.4a">panel dla zarządu</li><li data-i18n="sv.4b">baza przypadków</li><li data-i18n="sv.4c">reguły automat / człowiek</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">05</span>
-        <h3 class="svc__t">Zespół i bezpieczeństwo</h3>
+        <h3 class="svc__t" data-i18n="sv.5t">Zespół i bezpieczeństwo</h3>
         <div class="svc__d">
-          <p>Szkolenia z pracy z AI i konfiguracji własnego środowiska. RODO, higiena danych, anonimizacja danych wrażliwych i przegląd luk w bezpieczeństwie.</p>
-          <ul class="svc__tags"><li>szkolenia</li><li>RODO</li><li>cyberbezpieczeństwo</li></ul>
+          <p data-i18n="sv.5d">Szkolenia z pracy z AI i konfiguracji własnego środowiska. RODO, higiena danych, anonimizacja danych wrażliwych i przegląd luk w bezpieczeństwie.</p>
+          <ul class="svc__tags"><li data-i18n="sv.5a">szkolenia</li><li>RODO</li><li data-i18n="sv.5c">cyberbezpieczeństwo</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">06</span>
-        <h3 class="svc__t">Jakość i ciągłość działania</h3>
+        <h3 class="svc__t" data-i18n="sv.6t">Jakość i ciągłość działania</h3>
         <div class="svc__d">
-          <p>Każda automatyzacja ma zestaw testów na typowych przypadkach, plan awaryjny na wypadek niedostępności usług i swojego właściciela w firmie. Wszystko jest udokumentowane — system nie zależy od jednej osoby, także od nas.</p>
-          <ul class="svc__tags"><li>testy</li><li>plan awaryjny</li><li>dokumentacja</li></ul>
+          <p data-i18n="sv.6d">Każda automatyzacja ma zestaw testów na typowych przypadkach, plan awaryjny na wypadek niedostępności usług i swojego właściciela w firmie. Wszystko jest udokumentowane — system nie zależy od jednej osoby, także od nas.</p>
+          <ul class="svc__tags"><li data-i18n="sv.6a">testy</li><li data-i18n="sv.6b">plan awaryjny</li><li data-i18n="sv.6c">dokumentacja</li></ul>
         </div>
       </li>
       <li class="svc reveal">
         <span class="svc__n">07</span>
-        <h3 class="svc__t">Rozwój i opieka</h3>
+        <h3 class="svc__t" data-i18n="sv.7t">Rozwój i opieka</h3>
         <div class="svc__d">
-          <p>Narzędzia AI zmieniają się co miesiąc, a dane wymagają kontroli. Utrzymujemy i rozwijamy środowisko, dorabiamy brakujące elementy: moduły CRM, funkcje strony, aplikacje mobilne.</p>
-          <ul class="svc__tags"><li>opieka</li><li>nowe funkcje</li><li>aplikacje</li></ul>
+          <p data-i18n="sv.7d">Narzędzia AI zmieniają się co miesiąc, a dane wymagają kontroli. Utrzymujemy i rozwijamy środowisko, dorabiamy brakujące elementy: moduły CRM, funkcje strony, aplikacje mobilne.</p>
+          <ul class="svc__tags"><li data-i18n="sv.7a">opieka</li><li data-i18n="sv.7b">nowe funkcje</li><li data-i18n="sv.7c">aplikacje</li></ul>
         </div>
       </li>
     </ol>
 
     <div class="wins">
       <div class="wins__head reveal">
-        <p class="wins__k">Szybkie efekty</p>
-        <h3 class="wins__t">Od tego często zaczynamy</h3>
-        <p class="wins__d">Pierwsze automatyzacje, które dają wynik w ciągu kilku tygodni — zanim zbudujemy resztę.</p>
+        <p class="wins__k" data-i18n="wn.k">Szybkie efekty</p>
+        <h3 class="wins__t" data-i18n="wn.t">Od tego często zaczynamy</h3>
+        <p class="wins__d" data-i18n="wn.d">Pierwsze automatyzacje, które dają wynik w ciągu kilku tygodni — zanim zbudujemy resztę.</p>
       </div>
       <ul class="wins__grid">
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-filter"/></svg><b>Odsiewanie spamu</b><span>i sortowanie skrzynki według typu sprawy</span></li>
-        <li class="reveal reveal-d1"><svg aria-hidden="true"><use href="#i-calc"/></svg><b>Zapytania ofertowe</b><span>wycena z cennika i szkic odpowiedzi</span></li>
-        <li class="reveal reveal-d2"><svg aria-hidden="true"><use href="#i-bell"/></svg><b>Follow-upy z historią</b><span>co zaproponować i kiedy — według Twoich reguł</span></li>
-        <li class="reveal reveal-d3"><svg aria-hidden="true"><use href="#i-mail"/></svg><b>Odpowiedzi po godzinach</b><span>klient nie czeka do rana</span></li>
-        <li class="reveal"><svg aria-hidden="true"><use href="#i-image"/></svg><b>Kontrola plików</b><span>format, rozdzielczość, wektor</span></li>
-        <li class="reveal reveal-d1"><svg aria-hidden="true"><use href="#i-truck"/></svg><b>Przesyłki</b><span>etykiety i numery śledzenia</span></li>
-        <li class="reveal reveal-d2"><svg aria-hidden="true"><use href="#i-store"/></svg><b>Marketplace</b><span>wiadomości z Allegro w jednym miejscu</span></li>
-        <li class="reveal reveal-d3"><svg aria-hidden="true"><use href="#i-chart"/></svg><b>Raport dla zarządu</b><span>co poniedziałek w skrzynce</span></li>
+        <li class="reveal"><svg aria-hidden="true"><use href="#i-filter"/></svg><b data-i18n="wn.1t">Odsiewanie spamu</b><span data-i18n="wn.1d">i sortowanie skrzynki według typu sprawy</span></li>
+        <li class="reveal reveal-d1"><svg aria-hidden="true"><use href="#i-calc"/></svg><b data-i18n="wn.2t">Zapytania ofertowe</b><span data-i18n="wn.2d">wycena z cennika i szkic odpowiedzi</span></li>
+        <li class="reveal reveal-d2"><svg aria-hidden="true"><use href="#i-bell"/></svg><b data-i18n="wn.3t">Follow-upy z historią</b><span data-i18n="wn.3d">co zaproponować i kiedy — według Twoich reguł</span></li>
+        <li class="reveal reveal-d3"><svg aria-hidden="true"><use href="#i-mail"/></svg><b data-i18n="wn.4t">Odpowiedzi po godzinach</b><span data-i18n="wn.4d">klient nie czeka do rana</span></li>
+        <li class="reveal"><svg aria-hidden="true"><use href="#i-image"/></svg><b data-i18n="wn.5t">Kontrola plików</b><span data-i18n="wn.5d">format, rozdzielczość, wektor</span></li>
+        <li class="reveal reveal-d1"><svg aria-hidden="true"><use href="#i-truck"/></svg><b data-i18n="wn.6t">Przesyłki</b><span data-i18n="wn.6d">etykiety i numery śledzenia</span></li>
+        <li class="reveal reveal-d2"><svg aria-hidden="true"><use href="#i-store"/></svg><b data-i18n="wn.7t">Marketplace</b><span data-i18n="wn.7d">wiadomości z Allegro w jednym miejscu</span></li>
+        <li class="reveal reveal-d3"><svg aria-hidden="true"><use href="#i-chart"/></svg><b data-i18n="wn.8t">Raport dla zarządu</b><span data-i18n="wn.8d">co poniedziałek w skrzynce</span></li>
       </ul>
     </div>
 
     <div class="integrations reveal">
-      <div class="integrations__k">Pracujemy z narzędziami, których już używasz<small>Inne systemy? Jeśli mają API, zwykle da się je połączyć.</small></div>
+      <div class="integrations__k" data-i18n="int.k">Pracujemy z narzędziami, których już używasz<small>Inne systemy? Jeśli mają API, zwykle da się je połączyć.</small></div>
       <ul class="integrations__list">
         <li>Gmail / Google Workspace</li><li>Outlook / Microsoft 365</li><li>Pipedrive</li><li>HubSpot</li>
         <li>Fakturownia</li><li>WooCommerce</li><li>Allegro</li><li>InPost</li><li>DPD</li><li>UPS</li>
-        <li>Arkusze Google</li><li>Excel</li>
+        <li data-i18n="int.sheets">Arkusze Google</li><li>Excel</li>
       </ul>
     </div>
   </div>
@@ -425,59 +416,56 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">04 — Przykład</p>
-        <h2 class="h2 reveal reveal-d1">Przykład: asystent robi wszystko <em>poza decyzją</em>.</h2>
+        <p class="label reveal" data-i18n="so.label">04 — Przykład</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="so.h2">Przykład: asystent robi wszystko <em>poza decyzją</em>.</h2>
       </div>
-      <p class="lead reveal reveal-d2">
-        Jedna z automatyzacji — obsługa zapytań ofertowych. Bez nowego systemu i bez zmiany przyzwyczajeń: szkic odpowiedzi pojawia się tam, gdzie zespół już pracuje,
-        w wątku z klientem.
-      </p>
+      <p class="lead reveal reveal-d2" data-i18n="so.lead">Jedna z automatyzacji — obsługa zapytań ofertowych. Bez nowego systemu i bez zmiany przyzwyczajeń: szkic odpowiedzi pojawia się tam, gdzie zespół już pracuje, w wątku z klientem.</p>
     </div>
 
     <div class="pipeline">
       <div class="pipe reveal">
         <span class="pipe__n">01</span>
-        <h3 class="pipe__verb">Czyta</h3>
-        <p>Sprawdza skrzynkę i rozpoznaje, czego chce klient: wycena, pytanie, status zamówienia, reklamacja, plik graficzny. Rozpoznaje też język.</p>
-        <span class="pipe__chip"><span>typ · język · produkt · ilość</span></span>
+        <h3 class="pipe__verb" data-i18n="pp.1v">Czyta</h3>
+        <p data-i18n="pp.1d">Sprawdza skrzynkę i rozpoznaje, czego chce klient: wycena, pytanie, status zamówienia, reklamacja, plik graficzny. Rozpoznaje też język.</p>
+        <span class="pipe__chip"><span data-i18n="pp.1c">typ · język · produkt · ilość</span></span>
       </div>
       <div class="pipe reveal reveal-d1">
         <span class="pipe__n">02</span>
-        <h3 class="pipe__verb">Liczy</h3>
-        <p>Cenę liczy Twój cennik, nie model AI. Te same reguły co kalkulator na stronie, sprawdzone zestawem testów.</p>
-        <span class="pipe__chip"><span>cena netto · termin · dostawa</span></span>
+        <h3 class="pipe__verb" data-i18n="pp.2v">Liczy</h3>
+        <p data-i18n="pp.2d">Cenę liczy Twój cennik, nie model AI. Te same reguły co kalkulator na stronie, sprawdzone zestawem testów.</p>
+        <span class="pipe__chip"><span data-i18n="pp.2c">cena netto · termin · dostawa</span></span>
       </div>
       <div class="pipe reveal reveal-d2">
         <span class="pipe__n">03</span>
-        <h3 class="pipe__verb">Pisze</h3>
-        <p>Przygotowuje odpowiedź w języku klienta, Twoim tonem, na podstawie Twojej bazy wiedzy: terminy, materiały, warunki.</p>
-        <span class="pipe__chip"><span>szkic w wątku maila</span></span>
+        <h3 class="pipe__verb" data-i18n="pp.3v">Pisze</h3>
+        <p data-i18n="pp.3d">Przygotowuje odpowiedź w języku klienta, Twoim tonem, na podstawie Twojej bazy wiedzy: terminy, materiały, warunki.</p>
+        <span class="pipe__chip"><span data-i18n="pp.3c">szkic w wątku maila</span></span>
       </div>
       <div class="pipe reveal reveal-d3">
         <span class="pipe__n">04</span>
-        <h3 class="pipe__verb">Zapisuje</h3>
-        <p>Zakłada lub aktualizuje szansę sprzedaży w CRM, dołącza korespondencję i ustawia przypomnienie o follow-upie.</p>
-        <span class="pipe__chip"><span>CRM · przypomnienie</span></span>
+        <h3 class="pipe__verb" data-i18n="pp.4v">Zapisuje</h3>
+        <p data-i18n="pp.4d">Zakłada lub aktualizuje szansę sprzedaży w CRM, dołącza korespondencję i ustawia przypomnienie o follow-upie.</p>
+        <span class="pipe__chip"><span data-i18n="pp.4c">CRM · przypomnienie</span></span>
       </div>
       <div class="pipe pipe--human reveal reveal-d4">
-        <span class="pipe__n">05 — Ty</span>
-        <h3 class="pipe__verb">Decydujesz</h3>
-        <p>Otwierasz szkic, poprawiasz, jeśli trzeba, i klikasz „Wyślij”. Nietypowe sprawy asystent od razu oznacza dla handlowca — z notatką, co sprawdzić.</p>
-        <span class="pipe__chip"><span>1 kliknięcie</span></span>
+        <span class="pipe__n" data-i18n="pp.5n">05 — Ty</span>
+        <h3 class="pipe__verb" data-i18n="pp.5v">Decydujesz</h3>
+        <p data-i18n="pp.5d">Otwierasz szkic, poprawiasz, jeśli trzeba, i klikasz „Wyślij”. Nietypowe sprawy asystent od razu oznacza dla handlowca — z notatką, co sprawdzić.</p>
+        <span class="pipe__chip"><span data-i18n="pp.5c">1 kliknięcie</span></span>
       </div>
     </div>
 
     <div class="compare reveal">
       <table class="compare__table">
-        <caption class="sr-only">Porównanie: obsługa zapytań dziś i z asystentem</caption>
-        <thead><tr><th scope="col"></th><th scope="col">Dziś</th><th scope="col" class="after">Z asystentem</th></tr></thead>
+        <caption class="sr-only" data-i18n="cmp.cap">Porównanie: obsługa zapytań dziś i z asystentem</caption>
+        <thead><tr><th scope="col"></th><th scope="col" data-i18n="cmp.now">Dziś</th><th scope="col" class="after" data-i18n="cmp.with">Z asystentem</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Pierwsza odpowiedź</th><td class="before">Po kilku godzinach, gdy ktoś znajdzie czas</td><td class="after">Szkic gotowy chwilę po nadejściu maila</td></tr>
-          <tr><th scope="row">Wycena</th><td class="before">Ręcznie: cennik, kalkulator, wyjątki</td><td class="after">Automatycznie, według Twoich reguł</td></tr>
-          <tr><th scope="row">Języki obce</th><td class="before">Tłumacz, kopiuj, wklej, sprawdź</td><td class="after">Szkic od razu w języku klienta</td></tr>
-          <tr><th scope="row">CRM</th><td class="before">Przepisywanie albo „uzupełnię później”</td><td class="after">Uzupełnia się sam, z historią maili</td></tr>
-          <tr><th scope="row">Follow-up</th><td class="before">„Jak będzie czas”</td><td class="after">Zaplanowany po 3, 7 i 14 dniach</td></tr>
-          <tr><th scope="row">Kontrola</th><td class="before">Wiedza w głowach</td><td class="after">Człowiek zatwierdza, statystyki widać w liczbach</td></tr>
+          <tr><th scope="row" data-i18n="cmp.1h">Pierwsza odpowiedź</th><td class="before" data-i18n="cmp.1a">Po kilku godzinach, gdy ktoś znajdzie czas</td><td class="after" data-i18n="cmp.1b">Szkic gotowy chwilę po nadejściu maila</td></tr>
+          <tr><th scope="row" data-i18n="cmp.2h">Wycena</th><td class="before" data-i18n="cmp.2a">Ręcznie: cennik, kalkulator, wyjątki</td><td class="after" data-i18n="cmp.2b">Automatycznie, według Twoich reguł</td></tr>
+          <tr><th scope="row" data-i18n="cmp.3h">Języki obce</th><td class="before" data-i18n="cmp.3a">Tłumacz, kopiuj, wklej, sprawdź</td><td class="after" data-i18n="cmp.3b">Szkic od razu w języku klienta</td></tr>
+          <tr><th scope="row">CRM</th><td class="before" data-i18n="cmp.4a">Przepisywanie albo „uzupełnię później”</td><td class="after" data-i18n="cmp.4b">Uzupełnia się sam, z historią maili</td></tr>
+          <tr><th scope="row">Follow-up</th><td class="before" data-i18n="cmp.5a">„Jak będzie czas”</td><td class="after" data-i18n="cmp.5b">Zaplanowany po 3, 7 i 14 dniach</td></tr>
+          <tr><th scope="row" data-i18n="cmp.6h">Kontrola</th><td class="before" data-i18n="cmp.6a">Wiedza w głowach</td><td class="after" data-i18n="cmp.6b">Człowiek zatwierdza, statystyki widać w liczbach</td></tr>
         </tbody>
       </table>
     </div>
@@ -489,44 +477,41 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">05 — Bezpieczeństwo</p>
-        <h2 class="h2 reveal reveal-d1">Sześć zasad, których <em>nie łamiemy</em>.</h2>
+        <p class="label reveal" data-i18n="zs.label">05 — Bezpieczeństwo</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="zs.h2">Sześć zasad, których <em>nie łamiemy</em>.</h2>
       </div>
-      <p class="lead reveal reveal-d2">
-        AI w kontakcie z klientem to odpowiedzialność. Dlatego system jest zaprojektowany tak, żeby błąd modelu
-        nie mógł zamienić się w błąd firmy.
-      </p>
+      <p class="lead reveal reveal-d2" data-i18n="zs.lead">AI w kontakcie z klientem to odpowiedzialność. Dlatego system jest zaprojektowany tak, żeby błąd modelu nie mógł zamienić się w błąd firmy.</p>
     </div>
     <div class="principles">
       <article class="principle reveal">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-user-check"/></svg></span>
-        <h3>Człowiek ma ostatnie słowo</h3>
-        <p>Asystent nie ma przycisku „wyślij” — tworzy szkice. Automatyczna wysyłka prostych odpowiedzi jest możliwa tylko wtedy, gdy zdecydujesz o tym na podstawie wyników.</p>
+        <h3 data-i18n="zs.1t">Człowiek ma ostatnie słowo</h3>
+        <p data-i18n="zs.1d">Asystent nie ma przycisku „wyślij” — tworzy szkice. Automatyczna wysyłka prostych odpowiedzi jest możliwa tylko wtedy, gdy zdecydujesz o tym na podstawie wyników.</p>
       </article>
       <article class="principle reveal reveal-d1">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-table"/></svg></span>
-        <h3>AI nie wymyśla cen</h3>
-        <p>Cenę liczy narzędzie oparte na Twoim cenniku, a CRM sprawdza ją drugi raz. Jeśli czegoś nie ma w cenniku, sprawa trafia do handlowca.</p>
+        <h3 data-i18n="zs.2t">AI nie wymyśla cen</h3>
+        <p data-i18n="zs.2d">Cenę liczy narzędzie oparte na Twoim cenniku, a CRM sprawdza ją drugi raz. Jeśli czegoś nie ma w cenniku, sprawa trafia do handlowca.</p>
       </article>
       <article class="principle reveal reveal-d2">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-key"/></svg></span>
-        <h3>Twoje konta, Twój kod</h3>
-        <p>Wszystko działa na kontach firmy: poczta, CRM, klucze, kod i dokumentacja. Jeśli zakończymy współpracę, system zostaje u Ciebie i działa dalej.</p>
+        <h3 data-i18n="zs.3t">Twoje konta, Twój kod</h3>
+        <p data-i18n="zs.3d">Wszystko działa na kontach firmy: poczta, CRM, klucze, kod i dokumentacja. Jeśli zakończymy współpracę, system zostaje u Ciebie i działa dalej.</p>
       </article>
       <article class="principle reveal">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
-        <h3>RODO od pierwszego dnia</h3>
-        <p>Umowa powierzenia przetwarzania danych, biznesowe plany usług AI bez trenowania modeli na Twoich danych, minimalne uprawnienia dostępu.</p>
+        <h3 data-i18n="zs.4t">RODO od pierwszego dnia</h3>
+        <p data-i18n="zs.4d">Umowa powierzenia przetwarzania danych, biznesowe plany usług AI bez trenowania modeli na Twoich danych, minimalne uprawnienia dostępu.</p>
       </article>
       <article class="principle reveal reveal-d1">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-filter"/></svg></span>
-        <h3>Odporny na manipulację</h3>
-        <p>Treść maila to dane, nie polecenia. Asystent nie może usuwać danych, zmieniać cen ani eksportować listy klientów — nawet jeśli ktoś go o to „poprosi”.</p>
+        <h3 data-i18n="zs.5t">Odporny na manipulację</h3>
+        <p data-i18n="zs.5d">Treść maila to dane, nie polecenia. Asystent nie może usuwać danych, zmieniać cen ani eksportować listy klientów — nawet jeśli ktoś go o to „poprosi”.</p>
       </article>
       <article class="principle reveal reveal-d2">
         <span class="principle__icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></span>
-        <h3>Mierzymy, nie obiecujemy</h3>
-        <p>Start w trybie cienia, potem twarde liczby: czas pierwszej odpowiedzi, odsetek szkiców wysłanych bez poprawek, godziny odzyskane przez zespół.</p>
+        <h3 data-i18n="zs.6t">Mierzymy, nie obiecujemy</h3>
+        <p data-i18n="zs.6d">Start w trybie cienia, potem twarde liczby: czas pierwszej odpowiedzi, odsetek szkiców wysłanych bez poprawek, godziny odzyskane przez zespół.</p>
       </article>
     </div>
   </div>
@@ -537,36 +522,36 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">06 — Współpraca</p>
-        <h2 class="h2 reveal reveal-d1">Od rozmowy do pierwszych efektów w <em>4–6 tygodni</em>.</h2>
+        <p class="label reveal" data-i18n="pc.label">06 — Współpraca</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="pc.h2">Od rozmowy do pierwszych efektów w <em>4–6 tygodni</em>.</h2>
       </div>
-      <p class="lead reveal reveal-d2">Małymi krokami, z kontrolą na każdym etapie. Na każdym możesz powiedzieć „stop” — i wiesz, za co płacisz.</p>
+      <p class="lead reveal reveal-d2" data-i18n="pc.lead">Małymi krokami, z kontrolą na każdym etapie. Na każdym możesz powiedzieć „stop” — i wiesz, za co płacisz.</p>
     </div>
     <ol class="process">
       <li class="p-step reveal">
         <span class="p-step__dot">01</span>
-        <p class="p-step__time">30 minut · bezpłatnie</p>
-        <h3>Rozmowa</h3>
-        <p>Opowiadasz, jak pracuje firma i co zabiera zespołowi najwięcej czasu. Mówimy uczciwie, czy AI ma u Ciebie sens.</p>
+        <p class="p-step__time" data-i18n="pc.1k">30 minut · bezpłatnie</p>
+        <h3 data-i18n="pc.1t">Rozmowa</h3>
+        <p data-i18n="pc.1d">Opowiadasz, jak pracuje firma i co zabiera zespołowi najwięcej czasu. Mówimy uczciwie, czy AI ma u Ciebie sens.</p>
       </li>
       <li class="p-step reveal reveal-d1">
         <span class="p-step__dot">02</span>
-        <p class="p-step__time">1–2 tygodnie</p>
-        <h3>Audyt</h3>
-        <p>Obserwujemy pracę zespołu (na żywo lub z nagrań, za zgodą), przeglądamy systemy i dane.</p>
-        <ul><li>szacunek oszczędności</li><li>plan wdrożenia</li><li>stała cena</li></ul>
+        <p class="p-step__time" data-i18n="pc.2k">1–2 tygodnie</p>
+        <h3 data-i18n="pc.2t">Audyt</h3>
+        <p data-i18n="pc.2d">Obserwujemy pracę zespołu (na żywo lub z nagrań, za zgodą), przeglądamy systemy i dane.</p>
+        <ul><li data-i18n="pc.2a">szacunek oszczędności</li><li data-i18n="pc.2b">plan wdrożenia</li><li data-i18n="pc.2c">stała cena</li></ul>
       </li>
       <li class="p-step reveal reveal-d2">
         <span class="p-step__dot">03</span>
-        <p class="p-step__time">2–4 tygodnie</p>
-        <h3>Pilotaż w trybie cienia</h3>
-        <p>Pierwsze automatyzacje działają obok zespołu: przygotowują, zespół pracuje jak dotąd. Porównujemy, poprawiamy, mierzymy.</p>
+        <p class="p-step__time" data-i18n="pc.3k">2–4 tygodnie</p>
+        <h3 data-i18n="pc.3t">Pilotaż w trybie cienia</h3>
+        <p data-i18n="pc.3d">Pierwsze automatyzacje działają obok zespołu: przygotowują, zespół pracuje jak dotąd. Porównujemy, poprawiamy, mierzymy.</p>
       </li>
       <li class="p-step reveal reveal-d3">
         <span class="p-step__dot">04</span>
-        <p class="p-step__time">dalej · co miesiąc</p>
-        <h3>Wdrożenie i opieka</h3>
-        <p>Zespół korzysta z automatyzacji na co dzień. Co miesiąc raport z liczbami i kolejne usprawnienia z listy z audytu.</p>
+        <p class="p-step__time" data-i18n="pc.4k">dalej · co miesiąc</p>
+        <h3 data-i18n="pc.4t">Wdrożenie i opieka</h3>
+        <p data-i18n="pc.4d">Zespół korzysta z automatyzacji na co dzień. Co miesiąc raport z liczbami i kolejne usprawnienia z listy z audytu.</p>
       </li>
     </ol>
   </div>
@@ -577,72 +562,70 @@
   <div class="wrap">
     <div class="section-head section-head--split">
       <div>
-        <p class="label reveal">07 — Cennik</p>
-        <h2 class="h2 reveal reveal-d1">Jasne zasady. <em>Bez</em> niespodzianek.</h2>
+        <p class="label reveal" data-i18n="pz.label">07 — Cennik</p>
+        <h2 class="h2 reveal reveal-d1" data-i18n="pz.h2">Jasne zasady. <em>Bez</em> niespodzianek.</h2>
       </div>
-      <p class="lead reveal reveal-d2">Stałą cenę wdrożenia poznajesz po audycie, zanim cokolwiek podpiszesz. Opiekę możesz wypowiedzieć z miesięcznym wyprzedzeniem.</p>
+      <p class="lead reveal reveal-d2" data-i18n="pz.lead">Stałą cenę wdrożenia poznajesz po audycie, zanim cokolwiek podpiszesz. Opiekę możesz wypowiedzieć z miesięcznym wyprzedzeniem.</p>
     </div>
 
     <div class="pricing">
       <article class="price price--free reveal">
-        <span class="price__k">Krok 1</span>
-        <h3>Rozmowa wstępna</h3>
+        <span class="price__k" data-i18n="pz.1k">Krok 1</span>
+        <h3 data-i18n="pz.1t">Rozmowa wstępna</h3>
         <div class="price__amount"><span class="price__value">0&nbsp;zł</span></div>
-        <p class="price__desc">30 minut online albo u Ciebie w biurze (Warszawa i okolice).</p>
+        <p class="price__desc" data-i18n="pz.1d">30 minut online albo u Ciebie w biurze (Warszawa i okolice).</p>
         <ul class="price__list">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Analiza Twojego procesu</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Uczciwa ocena sensu automatyzacji</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Bez zobowiązań</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.1a">Analiza Twojego procesu</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.1b">Uczciwa ocena sensu automatyzacji</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.1c">Bez zobowiązań</span></li>
         </ul>
-        <a class="btn btn--ghost btn--block" href="#kontakt">Umów rozmowę</a>
+        <a class="btn btn--ghost btn--block" href="#kontakt" data-i18n="nav.cta">Umów rozmowę</a>
       </article>
 
       <article class="price price--feature reveal reveal-d1">
-        <span class="price__badge">Najczęstszy start</span>
-        <span class="price__k">Krok 2 · jednorazowo</span>
-        <h3>Wdrożenie</h3>
-        <div class="price__amount"><span class="price__from">od</span><span class="price__value">8&nbsp;000&nbsp;zł</span><span class="price__unit">netto</span></div>
-        <p class="price__desc">Audyt i pierwszy pakiet automatyzacji dopasowany do Twojej firmy.</p>
+        <span class="price__badge" data-i18n="pz.2badge">Najczęstszy start</span>
+        <span class="price__k" data-i18n="pz.2k">Krok 2 · jednorazowo</span>
+        <h3 data-i18n="pz.2t">Wdrożenie</h3>
+        <div class="price__amount"><span class="price__from" data-i18n="pz.from">od</span><span class="price__value">8&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.net">netto</span></div>
+        <p class="price__desc" data-i18n="pz.2d">Audyt i pierwszy pakiet automatyzacji dopasowany do Twojej firmy.</p>
         <ul class="price__list">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Audyt pracy zespołu i lista priorytetów</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Środowisko AI z podziałem na role</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pierwsze automatyzacje i integracje + testy</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Baza wiedzy firmy i dokumentacja</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pilotaż w trybie cienia</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Szkolenie zespołu i dokumentacja</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2a">Audyt pracy zespołu i lista priorytetów</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2b">Środowisko AI z podziałem na role</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2c">Pierwsze automatyzacje i integracje + testy</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2e">Baza wiedzy firmy i dokumentacja</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2f">Pilotaż w trybie cienia</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.2g">Szkolenie zespołu i dokumentacja</span></li>
         </ul>
-        <a class="btn btn--block" href="#kontakt">Zacznij od rozmowy <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--block" href="#kontakt"><span data-i18n="pz.2cta">Zacznij od rozmowy</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </article>
 
       <article class="price reveal reveal-d2">
-        <span class="price__k">Krok 3 · miesięcznie</span>
-        <h3>Opieka i rozwój</h3>
-        <div class="price__amount"><span class="price__from">od</span><span class="price__value">1&nbsp;000&nbsp;zł</span><span class="price__unit">netto / mies.</span></div>
-        <p class="price__desc">System, który nie starzeje się po wdrożeniu.</p>
+        <span class="price__k" data-i18n="pz.3k">Krok 3 · miesięcznie</span>
+        <h3 data-i18n="pz.3t">Opieka i rozwój</h3>
+        <div class="price__amount"><span class="price__from" data-i18n="pz.from">od</span><span class="price__value">1&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.3u">netto / mies.</span></div>
+        <p class="price__desc" data-i18n="pz.3d">System, który nie starzeje się po wdrożeniu.</p>
         <ul class="price__list">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Monitoring i poprawki</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktualizacje cennika i bazy wiedzy</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Miesięczny raport z liczbami</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kolejne automatyzacje w pakiecie godzin</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Wsparcie w dni robocze</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3a">Monitoring i poprawki</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3b">Aktualizacje cennika i bazy wiedzy</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3c">Miesięczny raport z liczbami</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3e">Kolejne automatyzacje w pakiecie godzin</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3f">Wsparcie w dni robocze</span></li>
         </ul>
-        <a class="btn btn--ink btn--block" href="#kontakt">Zapytaj o szczegóły</a>
+        <a class="btn btn--ink btn--block" href="#kontakt" data-i18n="pz.3cta">Zapytaj o szczegóły</a>
       </article>
     </div>
 
     <p class="pricing__note reveal"><svg aria-hidden="true"><use href="#i-info"/></svg>
-      Koszty samych narzędzi AI (abonamenty lub API) opłacasz bezpośrednio, na kontach firmy — zwykle od kilkudziesięciu
-      do kilkuset złotych miesięcznie, zależnie od liczby zapytań. Podane ceny są cenami netto, doliczamy VAT.</p>
+      <span data-i18n="pz.note">Koszty samych narzędzi AI (abonamenty lub API) opłacasz bezpośrednio, na kontach firmy — zwykle od kilkudziesięciu do kilkuset złotych miesięcznie, zależnie od liczby zapytań. Podane ceny są cenami netto, doliczamy VAT.</span></p>
 
     <div class="pilot reveal">
       <div class="pilot__seats" aria-hidden="true"><i></i><i></i><i></i></div>
       <div>
-        <span class="pilot__k">Program pilotażowy · 3 firmy</span>
-        <h3>Preferencyjne warunki dla pierwszych wdrożeń</h3>
-        <p>Szukamy trzech firm, z którymi zbudujemy pierwsze studia przypadku. W zamian za zgodę na opisanie wyników
-          (bez danych poufnych) — niższa cena wdrożenia i pierwszeństwo w rozwoju nowych funkcji.</p>
+        <span class="pilot__k" data-i18n="pz.pk">Program pilotażowy · 3 firmy</span>
+        <h3 data-i18n="pz.pt">Preferencyjne warunki dla pierwszych wdrożeń</h3>
+        <p data-i18n="pz.pd">Szukamy trzech firm, z którymi zbudujemy pierwsze studia przypadku. W zamian za zgodę na opisanie wyników (bez danych poufnych) — niższa cena wdrożenia i pierwszeństwo w rozwoju nowych funkcji.</p>
       </div>
-      <a class="btn btn--ink" href="#kontakt">Zgłoś firmę</a>
+      <a class="btn btn--ink" href="#kontakt" data-i18n="pz.pcta">Zgłoś firmę</a>
     </div>
   </div>
 </section>
@@ -652,26 +635,18 @@
   <div class="wrap about">
     <div class="about__photo reveal">
       <span class="about__monogram" aria-hidden="true">DiLa</span>
-      <div class="about__card"><b>Digital Lab</b><span>Warszawa</span></div>
+      <div class="about__card"><b>Digital Lab</b><span data-i18n="ab.city">Warszawa</span></div>
     </div>
     <div class="about__text">
-      <p class="label reveal">08 — Kim jesteśmy</p>
-      <h2 class="h2 reveal reveal-d1">Programiści, którzy <em>znają</em> procesy firm od środka.</h2>
-      <p class="reveal reveal-d2">
-        DiLa to pracownia programistyczna z Warszawy. Od lat tworzymy oprogramowanie dla firm — systemy sprzedaży, magazynu
-        i fakturowania, z których na co dzień korzystają polskie przedsiębiorstwa. Wiemy, jak wygląda droga od zapytania,
-        przez ofertę i zamówienie, do faktury.
-      </p>
-      <p class="reveal reveal-d2">
-        Na co dzień pracujemy z agentami AI — <strong>zautomatyzowaliśmy nimi większość rutyny we własnej pracy</strong>.
-        Teraz robimy to samo dla firm. Rozmawiasz bezpośrednio z ludźmi, którzy projektują i budują rozwiązanie,
-        bez pośredników i działu sprzedaży.
-      </p>
+      <p class="label reveal" data-i18n="ab.label">08 — Kim jesteśmy</p>
+      <h2 class="h2 reveal reveal-d1" data-i18n="ab.h2">Programiści, którzy <em>znają</em> procesy firm od środka.</h2>
+      <p class="reveal reveal-d2" data-i18n="ab.p1">DiLa to pracownia programistyczna z Warszawy. Od lat tworzymy oprogramowanie dla firm — systemy sprzedaży, magazynu i fakturowania, z których na co dzień korzystają polskie przedsiębiorstwa. Wiemy, jak wygląda droga od zapytania, przez ofertę i zamówienie, do faktury.</p>
+      <p class="reveal reveal-d2" data-i18n="ab.p2">Na co dzień pracujemy z agentami AI — <strong>zautomatyzowaliśmy nimi większość rutyny we własnej pracy</strong>. Teraz robimy to samo dla firm. Rozmawiasz bezpośrednio z ludźmi, którzy projektują i budują rozwiązanie, bez pośredników i działu sprzedaży.</p>
       <div class="facts reveal reveal-d3">
-        <div class="fact"><div class="fact__k">Kod, nie klocki</div><div class="fact__v">Prawdziwe integracje</div><div class="fact__d">Piszemy je sami, zamiast sklejać gotowe narzędzia no-code.</div></div>
-        <div class="fact"><div class="fact__k">Procesy</div><div class="fact__v">Wycena → zamówienie → faktura</div><div class="fact__d">Rozumiemy język handlowca i księgowej.</div></div>
-        <div class="fact"><div class="fact__k">Na miejscu</div><div class="fact__v">Warszawa</div><div class="fact__d">Możemy przyjechać do biura i usiąść z zespołem.</div></div>
-        <div class="fact"><div class="fact__k">Języki</div><div class="fact__v">Polski, angielski, ukraiński, rosyjski</div><div class="fact__d">Rozmowy, dokumentacja i szkolenia.</div></div>
+        <div class="fact"><div class="fact__k" data-i18n="ab.1k">Kod, nie klocki</div><div class="fact__v" data-i18n="ab.1v">Prawdziwe integracje</div><div class="fact__d" data-i18n="ab.1d">Piszemy je sami, zamiast sklejać gotowe narzędzia no-code.</div></div>
+        <div class="fact"><div class="fact__k" data-i18n="ab.2k">Procesy</div><div class="fact__v" data-i18n="ab.2v">Wycena → zamówienie → faktura</div><div class="fact__d" data-i18n="ab.2d">Rozumiemy język handlowca i księgowej.</div></div>
+        <div class="fact"><div class="fact__k" data-i18n="ab.3k">Na miejscu</div><div class="fact__v" data-i18n="ab.3v">Warszawa</div><div class="fact__d" data-i18n="ab.3d">Możemy przyjechać do biura i usiąść z zespołem.</div></div>
+        <div class="fact"><div class="fact__k" data-i18n="ab.4k">Języki</div><div class="fact__v" data-i18n="ab.4v">Polski, angielski, ukraiński, rosyjski</div><div class="fact__d" data-i18n="ab.4d">Rozmowy, dokumentacja i szkolenia.</div></div>
       </div>
     </div>
   </div>
@@ -681,47 +656,47 @@
 <section class="section section--alt" id="faq">
   <div class="wrap faq__grid">
     <div class="faq__aside">
-      <p class="label reveal">09 — Pytania</p>
-      <h2 class="h2 reveal reveal-d1">Zanim zapytasz.</h2>
-      <p class="lead reveal reveal-d2">Nie ma tu odpowiedzi na Twoje pytanie? Zadaj je na rozmowie — to nic nie kosztuje.</p>
-      <a class="btn btn--ink reveal reveal-d3" href="#kontakt" style="margin-top:28px">Zadaj pytanie</a>
+      <p class="label reveal" data-i18n="fq.label">09 — Pytania</p>
+      <h2 class="h2 reveal reveal-d1" data-i18n="fq.h2">Zanim zapytasz.</h2>
+      <p class="lead reveal reveal-d2" data-i18n="fq.lead">Nie ma tu odpowiedzi na Twoje pytanie? Zadaj je na rozmowie — to nic nie kosztuje.</p>
+      <a class="btn btn--ink reveal reveal-d3" href="#kontakt" style="margin-top:28px" data-i18n="fq.cta">Zadaj pytanie</a>
     </div>
     <div class="faq__list">
       <details class="faq__item">
-        <summary>Czy AI wyśle coś klientowi bez mojej zgody?</summary>
-        <div class="faq__a"><p><strong>Nie.</strong> Asystent tworzy szkice w Twojej skrzynce. Wysyła człowiek. Automatyczną wysyłkę prostych odpowiedzi (np. „jaki jest termin realizacji”) można włączyć później — tylko jeśli tak zdecydujesz, po kilku tygodniach mierzenia jakości.</p></div>
+        <summary data-i18n="fq.1q">Czy AI wyśle coś klientowi bez mojej zgody?</summary>
+        <div class="faq__a"><p data-i18n="fq.1a"><strong>Nie.</strong> Asystent tworzy szkice w Twojej skrzynce. Wysyła człowiek. Automatyczną wysyłkę prostych odpowiedzi (np. „jaki jest termin realizacji”) można włączyć później — tylko jeśli tak zdecydujesz, po kilku tygodniach mierzenia jakości.</p></div>
       </details>
       <details class="faq__item">
-        <summary>A jeśli AI pomyli się w cenie?</summary>
-        <div class="faq__a"><p>Model AI w ogóle nie liczy cen. Liczy je osobne narzędzie, zbudowane na Twoim cenniku i sprawdzane zestawem testowych wycen przy każdej zmianie. Jeśli zapytanie wykracza poza cennik (nietypowy rozmiar, kilka kolorów, eksport), asystent nie podaje ceny i oznacza sprawę dla handlowca.</p></div>
+        <summary data-i18n="fq.2q">A jeśli AI pomyli się w cenie?</summary>
+        <div class="faq__a"><p data-i18n="fq.2a">Model AI w ogóle nie liczy cen. Liczy je osobne narzędzie, zbudowane na Twoim cenniku i sprawdzane zestawem testowych wycen przy każdej zmianie. Jeśli zapytanie wykracza poza cennik (nietypowy rozmiar, kilka kolorów, eksport), asystent nie podaje ceny i oznacza sprawę dla handlowca.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Czy muszę zmieniać pocztę albo CRM?</summary>
-        <div class="faq__a"><p>Nie. Asystent pracuje z narzędziami, które już masz: Gmail lub Outlook, Pipedrive, HubSpot, Fakturownia, arkusze. Jeśli nie masz CRM, zaproponujemy proste rozwiązanie — ale nie jest to warunek.</p></div>
+        <summary data-i18n="fq.3q">Czy muszę zmieniać pocztę albo CRM?</summary>
+        <div class="faq__a"><p data-i18n="fq.3a">Nie. Asystent pracuje z narzędziami, które już masz: Gmail lub Outlook, Pipedrive, HubSpot, Fakturownia, arkusze. Jeśli nie masz CRM, zaproponujemy proste rozwiązanie — ale nie jest to warunek.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Co z RODO i danymi klientów?</summary>
-        <div class="faq__a"><p>Podpisujemy umowę powierzenia przetwarzania danych. Korzystamy z biznesowych planów usług AI, w których dane nie służą do trenowania modeli. Dostępy są minimalne, a dane osobowe nie są kopiowane poza Twoje systemy, jeśli nie jest to konieczne.</p></div>
+        <summary data-i18n="fq.4q">Co z RODO i danymi klientów?</summary>
+        <div class="faq__a"><p data-i18n="fq.4a">Podpisujemy umowę powierzenia przetwarzania danych. Korzystamy z biznesowych planów usług AI, w których dane nie służą do trenowania modeli. Dostępy są minimalne, a dane osobowe nie są kopiowane poza Twoje systemy, jeśli nie jest to konieczne.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Ile kosztuje utrzymanie miesięcznie?</summary>
-        <div class="faq__a"><p>Dwa składniki: opieka i rozwój (od 1&nbsp;000 zł netto miesięcznie) oraz koszt samych narzędzi AI, płacony bezpośrednio przez firmę — zwykle od kilkudziesięciu do kilkuset złotych miesięcznie. Dokładną kwotę szacujemy w audycie, na podstawie liczby Twoich zapytań.</p></div>
+        <summary data-i18n="fq.5q">Ile kosztuje utrzymanie miesięcznie?</summary>
+        <div class="faq__a"><p data-i18n="fq.5a">Dwa składniki: opieka i rozwój (od 1&nbsp;000 zł netto miesięcznie) oraz koszt samych narzędzi AI, płacony bezpośrednio przez firmę — zwykle od kilkudziesięciu do kilkuset złotych miesięcznie. Dokładną kwotę szacujemy w audycie, na podstawie liczby Twoich zapytań.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Ile trwa wdrożenie?</summary>
-        <div class="faq__a"><p>Pierwsze efekty zwykle po 4–6 tygodniach: 1–2 tygodnie audytu i przygotowania, potem 2–4 tygodnie pilotażu w trybie cienia. Pełne wdrożenie rozkładamy na etapy według listy priorytetów z audytu — tempo ustalasz Ty.</p></div>
+        <summary data-i18n="fq.6q">Ile trwa wdrożenie?</summary>
+        <div class="faq__a"><p data-i18n="fq.6a">Pierwsze efekty zwykle po 4–6 tygodniach: 1–2 tygodnie audytu i przygotowania, potem 2–4 tygodnie pilotażu w trybie cienia. Pełne wdrożenie rozkładamy na etapy według listy priorytetów z audytu — tempo ustalasz Ty.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Czy obsłuży zapytania w obcych językach?</summary>
-        <div class="faq__a"><p>Tak. Asystent rozpoznaje język zapytania i przygotowuje odpowiedź w tym samym języku — niemieckim, angielskim, czeskim i wielu innych. Ton i terminologię ustalamy razem, na podstawie Twoich najlepszych dotychczasowych odpowiedzi.</p></div>
+        <summary data-i18n="fq.7q">Czy obsłuży zapytania w obcych językach?</summary>
+        <div class="faq__a"><p data-i18n="fq.7a">Tak. Asystent rozpoznaje język zapytania i przygotowuje odpowiedź w tym samym języku — niemieckim, angielskim, czeskim i wielu innych. Ton i terminologię ustalamy razem, na podstawie Twoich najlepszych dotychczasowych odpowiedzi.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Co, jeśli przestaniemy współpracować?</summary>
-        <div class="faq__a"><p>System zostaje u Ciebie i działa dalej. Konta, klucze, kod i dokumentacja od początku należą do Twojej firmy. Opiekę wypowiadasz z miesięcznym wyprzedzeniem.</p></div>
+        <summary data-i18n="fq.8q">Co, jeśli przestaniemy współpracować?</summary>
+        <div class="faq__a"><p data-i18n="fq.8a">System zostaje u Ciebie i działa dalej. Konta, klucze, kod i dokumentacja od początku należą do Twojej firmy. Opiekę wypowiadasz z miesięcznym wyprzedzeniem.</p></div>
       </details>
       <details class="faq__item">
-        <summary>Dla jakiej wielkości firmy to ma sens?</summary>
-        <div class="faq__a"><p>Najlepiej dla firm od kilku do kilkudziesięciu osób, w których dużo pracy odbywa się w poczcie, arkuszach i CRM. Przy mniejszej skali też bywa opłacalne — policz to w <a href="#kalkulator">kalkulatorze</a> albo zapytaj na rozmowie.</p></div>
+        <summary data-i18n="fq.9q">Dla jakiej wielkości firmy to ma sens?</summary>
+        <div class="faq__a"><p data-i18n="fq.9a">Najlepiej dla firm od kilku do kilkudziesięciu osób, w których dużo pracy odbywa się w poczcie, arkuszach i CRM. Przy mniejszej skali też bywa opłacalne — policz to w <a href="#kalkulator">kalkulatorze</a> albo zapytaj na rozmowie.</p></div>
       </details>
     </div>
   </div>
@@ -731,13 +706,13 @@
 <section class="section section--dark cta" id="kontakt">
   <div class="wrap cta__grid">
     <div>
-      <p class="label reveal">10 — Kontakt</p>
-      <h2 class="h2 reveal reveal-d1">Sprawdźmy, ile czasu <em>tracisz</em> na rutynę.</h2>
-      <p class="lead reveal reveal-d2">30 minut, bez zobowiązań. Jeśli automatyzacja w Twojej firmie nie ma sensu — powiemy to wprost.</p>
+      <p class="label reveal" data-i18n="ct.label">10 — Kontakt</p>
+      <h2 class="h2 reveal reveal-d1" data-i18n="ct.h2">Sprawdźmy, ile czasu <em>tracisz</em> na rutynę.</h2>
+      <p class="lead reveal reveal-d2" data-i18n="ct.lead">30 minut, bez zobowiązań. Jeśli automatyzacja w Twojej firmie nie ma sensu — powiemy to wprost.</p>
       <ul class="cta__points reveal reveal-d3">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Odpowiadamy w ciągu jednego dnia roboczego.</b> Zwykle szybciej.</span></li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Online albo w Twoim biurze</b> — Warszawa i okolice.</span></li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Przygotuj 2–3 zadania, które najbardziej męczą zespół.</b> Pokażemy, jak można je zautomatyzować.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ct.1"><b>Odpowiadamy w ciągu jednego dnia roboczego.</b> Zwykle szybciej.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ct.2"><b>Online albo w Twoim biurze</b> — Warszawa i okolice.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ct.3"><b>Przygotuj 2–3 zadania, które najbardziej męczą zespół.</b> Pokażemy, jak można je zautomatyzować.</span></li>
       </ul>
       <div class="cta__direct reveal reveal-d4">
         <a href="mailto:kontakt@twojadomena.pl" data-cfg="email"><svg aria-hidden="true"><use href="#i-mail"/></svg><span>kontakt@twojadomena.pl</span></a>
@@ -748,29 +723,29 @@
 
     <form class="form reveal reveal-d2" id="contact-form" novalidate>
       <div>
-        <p class="form__title">Umów bezpłatną rozmowę</p>
+        <p class="form__title" data-i18n="fm.title">Umów bezpłatną rozmowę</p>
       </div>
-      <p class="form__sub">Formularz otworzy Twój program pocztowy z gotową wiadomością.</p>
+      <p class="form__sub" data-i18n="fm.sub">Formularz otworzy Twój program pocztowy z gotową wiadomością.</p>
       <div class="form__row">
-        <div class="field"><label for="f-name">Imię i nazwisko</label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="f-company">Firma</label><input id="f-company" name="company" autocomplete="organization" required></div>
+        <div class="field"><label for="f-name" data-i18n="fm.name">Imię i nazwisko</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-company" data-i18n="fm.company">Firma</label><input id="f-company" name="company" autocomplete="organization" required></div>
       </div>
       <div class="form__row">
         <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="f-phone">Telefon <span>(opcjonalnie)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="f-phone"><span data-i18n="fm.phone">Telefon</span> <span data-i18n="fm.opt">(opcjonalnie)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
       </div>
       <div class="field">
-        <label for="f-volume">Ile osób w zespole?</label>
+        <label for="f-volume" data-i18n="fm.vol">Ile osób w zespole?</label>
         <select id="f-volume" name="volume">
-          <option>1–5</option><option selected>6–15</option><option>16–50</option><option>ponad 50</option>
+          <option>1–5</option><option selected>6–15</option><option>16–50</option><option data-i18n="fm.vol4">ponad 50</option>
         </select>
       </div>
-      <div class="field"><label for="f-msg">Co zajmuje Twojemu zespołowi najwięcej czasu? <span>(opcjonalnie)</span></label><textarea id="f-msg" name="message"></textarea></div>
+      <div class="field"><label for="f-msg"><span data-i18n="fm.msg">Co zajmuje Twojemu zespołowi najwięcej czasu?</span> <span data-i18n="fm.opt">(opcjonalnie)</span></label><textarea id="f-msg" name="message"></textarea></div>
       <label class="form__consent"><input type="checkbox" id="f-consent" required>
-        <span>Wyrażam zgodę na kontakt w sprawie mojego zapytania. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</span></label>
-      <button class="btn btn--block" type="submit">Wyślij zapytanie <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <span data-i18n="fm.consent">Wyrażam zgodę na kontakt w sprawie mojego zapytania. Szczegóły w <a href="polityka-prywatnosci.html" data-keeplang>polityce prywatności</a>.</span></label>
+      <button class="btn btn--block" type="submit"><span data-i18n="fm.submit">Wyślij zapytanie</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
       <p class="form__status" id="form-status" role="status"></p>
-      <p class="form__fine">Bez newslettera i bez spamu. Twoje dane służą tylko do odpowiedzi.</p>
+      <p class="form__fine" data-i18n="fm.fine">Bez newslettera i bez spamu. Twoje dane służą tylko do odpowiedzi.</p>
     </form>
   </div>
 </section>
@@ -790,19 +765,19 @@
           </svg>
           <span class="brand__text"><span class="brand__name">DiLa</span><span class="brand__sub">Digital Lab</span></span>
         </a>
-        <p class="footer__about">Wdrożenia AI dla małych i średnich firm: audyt, asystenci AI, integracje, statystyki, szkolenia. Warszawa.</p>
+        <p class="footer__about" data-i18n="ft.about">Wdrożenia AI dla małych i średnich firm: audyt, asystenci AI, integracje, statystyki, szkolenia. Warszawa.</p>
       </div>
       <div>
-        <h4>Na stronie</h4>
+        <h4 data-i18n="ft.onpage">Na stronie</h4>
         <ul>
-          <li><a href="#problem">Problem</a></li>
-          <li><a href="#rozwiazanie">Jak to działa</a></li>
-          <li><a href="#cennik">Cennik</a></li>
+          <li><a href="#problem" data-i18n="nav.problem">Problem</a></li>
+          <li><a href="#rozwiazanie" data-i18n="ft.how">Jak to działa</a></li>
+          <li><a href="#cennik" data-i18n="nav.pricing">Cennik</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <h4>Kontakt</h4>
+        <h4 data-i18n="ft.contact">Kontakt</h4>
         <ul>
           <li><a href="mailto:kontakt@twojadomena.pl" data-cfg="email"><span>kontakt@twojadomena.pl</span></a></li>
           <li><a href="tel:+48000000000" data-cfg="phone"><span>+48 000 000 000</span></a></li>
@@ -812,11 +787,12 @@
     </div>
     <div class="footer__legal">
       <span>© <span id="year">2026</span> Digital Lab <span data-cfg="name">Dmytro Honcharov</span> · NIP: <span data-cfg="nip">0000000000</span></span>
-      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      <a href="polityka-prywatnosci.html" data-keeplang data-i18n="ft.privacy">Polityka prywatności</a>
     </div>
   </div>
 </footer>
 
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

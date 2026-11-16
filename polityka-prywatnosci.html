@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Polityka prywatności — DiLa | Digital Lab</title>
+  <title data-i18n="pol.title">Polityka prywatności — DiLa | Digital Lab</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("dila-lang");if(/^(en|uk|ru)$/.test(l)){document.documentElement.classList.add("i18n-pending");setTimeout(function(){document.documentElement.classList.remove("i18n-pending")},2500)}}catch(e){}})();</script>
   <style>
     .legal { padding: 140px 0 100px; }
     .legal .wrap { max-width: 780px; }
@@ -25,7 +26,7 @@
 <body>
 <header class="header">
   <div class="wrap header__inner">
-    <a class="brand" href="index.html" aria-label="DiLa — Digital Lab, strona główna">
+    <a class="brand" href="index.html" data-keeplang aria-label="DiLa — Digital Lab, strona główna" data-i18n-attr="aria-label:a11y.brand">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect class="m-bg" width="40" height="40" rx="10"/>
         <path class="m-fg" d="M11 10h8.5C26.4 10 31 14.1 31 20s-4.6 10-11.5 10H11V10zm5 4.4v11.2h3.3c3.9 0 6.5-2.2 6.5-5.6s-2.6-5.6-6.5-5.6H16z"/>
@@ -33,54 +34,56 @@
       </svg>
       <span class="brand__text"><span class="brand__name">DiLa</span><span class="brand__sub">Digital Lab</span></span>
     </a>
-    <a class="btn btn--sm btn--ink" href="index.html#kontakt">Umów rozmowę</a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="lang" role="group" aria-label="Język / Language">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UK</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+      <a class="btn btn--sm btn--ink" href="index.html#kontakt" data-keeplang data-i18n="nav.cta">Umów rozmowę</a>
+    </div>
   </div>
 </header>
 
 <main class="legal">
   <div class="wrap">
-    <h1>Polityka prywatności</h1>
-    <p class="meta">Obowiązuje od: 2026-11-15</p>
+    <h1 data-i18n="pol.h1">Polityka prywatności</h1>
+    <p class="meta" data-i18n="pol.meta">Obowiązuje od: 2026-11-15</p>
+    <p class="meta" data-i18n="pol.note" data-i18n-optional hidden></p>
 
     <!-- TODO: uzupełnić dane i przed publikacją dać do przejrzenia (np. prawnikowi lub w biurze rachunkowym). -->
 
-    <h2>1. Administrator danych</h2>
-    <p>Administratorem danych osobowych jest Dmytro Honcharov, prowadzący działalność gospodarczą pod firmą
-      Digital Lab Dmytro Honcharov, NIP: 0000000000, adres: [adres z CEIDG]. Kontakt: kontakt@twojadomena.pl.</p>
+    <h2 data-i18n="pol.1h">1. Administrator danych</h2>
+    <p data-i18n="pol.1p">Administratorem danych osobowych jest Dmytro Honcharov, prowadzący działalność gospodarczą pod firmą Digital Lab Dmytro Honcharov, NIP: 0000000000, adres: [adres z CEIDG]. Kontakt: kontakt@twojadomena.pl.</p>
 
-    <h2>2. Jakie dane i w jakim celu</h2>
-    <p>Przetwarzamy dane, które nam przekazujesz — w wiadomości e-mail, przez formularz kontaktowy lub telefonicznie:
-      imię i nazwisko, nazwę firmy, adres e-mail, numer telefonu oraz treść wiadomości. Wykorzystujemy je wyłącznie po to, aby:</p>
+    <h2 data-i18n="pol.2h">2. Jakie dane i w jakim celu</h2>
+    <p data-i18n="pol.2p">Przetwarzamy dane, które nam przekazujesz — w wiadomości e-mail, przez formularz kontaktowy lub telefonicznie: imię i nazwisko, nazwę firmy, adres e-mail, numer telefonu oraz treść wiadomości. Wykorzystujemy je wyłącznie po to, aby:</p>
     <ul>
-      <li>odpowiedzieć na Twoje zapytanie i umówić rozmowę (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy);</li>
-      <li>prowadzić dalszą korespondencję biznesową (art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes);</li>
-      <li>wykonać umowę i obowiązki księgowo-podatkowe, jeśli rozpoczniemy współpracę (art. 6 ust. 1 lit. b i c RODO).</li>
+      <li data-i18n="pol.2a">odpowiedzieć na Twoje zapytanie i umówić rozmowę (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy);</li>
+      <li data-i18n="pol.2b">prowadzić dalszą korespondencję biznesową (art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes);</li>
+      <li data-i18n="pol.2c">wykonać umowę i obowiązki księgowo-podatkowe, jeśli rozpoczniemy współpracę (art. 6 ust. 1 lit. b i c RODO).</li>
     </ul>
 
-    <h2>3. Formularz kontaktowy</h2>
-    <p>Formularz na stronie nie wysyła danych na żaden serwer. Po kliknięciu „Wyślij zapytanie” otwiera się Twój program pocztowy
-      z przygotowaną wiadomością — to Ty decydujesz, czy ją wyślesz.</p>
+    <h2 data-i18n="pol.3h">3. Formularz kontaktowy</h2>
+    <p data-i18n="pol.3p">Formularz na stronie nie wysyła danych na żaden serwer. Po kliknięciu „Wyślij zapytanie” otwiera się Twój program pocztowy z przygotowaną wiadomością — to Ty decydujesz, czy ją wyślesz.</p>
 
-    <h2>4. Pliki cookies, analityka i czcionki</h2>
-    <p>Strona nie używa plików cookies, narzędzi analitycznych ani skryptów śledzących. Czcionki są przechowywane na tym samym serwerze co strona,
-      więc Twój adres IP nie jest przekazywany zewnętrznym dostawcom czcionek.</p>
-    <p>Serwer, na którym działa strona, może automatycznie zapisywać standardowe logi techniczne (np. adres IP, czas odwiedzin) w celu zapewnienia
-      bezpieczeństwa. Dostawca hostingu: [nazwa dostawcy].</p>
+    <h2 data-i18n="pol.4h">4. Pliki cookies, analityka i czcionki</h2>
+    <p data-i18n="pol.4p1">Strona nie używa plików cookies, narzędzi analitycznych ani skryptów śledzących. Czcionki są przechowywane na tym samym serwerze co strona, więc Twój adres IP nie jest przekazywany zewnętrznym dostawcom czcionek.</p>
+    <p data-i18n="pol.4p2">Jedyne, co strona zapisuje w Twojej przeglądarce, to wybrany język (w pamięci lokalnej przeglądarki, bez danych osobowych i bez przekazywania gdziekolwiek). Serwer, na którym działa strona, może automatycznie zapisywać standardowe logi techniczne (np. adres IP, czas odwiedzin) w celu zapewnienia bezpieczeństwa. Dostawca hostingu: [nazwa dostawcy].</p>
 
-    <h2>5. Jak długo przechowujemy dane</h2>
-    <p>Korespondencję przechowujemy do czasu zakończenia rozmów, a następnie nie dłużej niż 2 lata, chyba że rozpoczniemy współpracę —
-      wtedy przez okres wymagany przepisami (np. podatkowymi).</p>
+    <h2 data-i18n="pol.5h">5. Jak długo przechowujemy dane</h2>
+    <p data-i18n="pol.5p">Korespondencję przechowujemy do czasu zakończenia rozmów, a następnie nie dłużej niż 2 lata, chyba że rozpoczniemy współpracę — wtedy przez okres wymagany przepisami (np. podatkowymi).</p>
 
-    <h2>6. Odbiorcy danych</h2>
-    <p>Dane mogą być przetwarzane przez dostawców usług, z których korzystamy: poczta elektroniczna, hosting, biuro rachunkowe — wyłącznie w zakresie
-      niezbędnym do świadczenia tych usług. Nie sprzedajemy danych i nie przekazujemy ich w celach marketingowych.</p>
+    <h2 data-i18n="pol.6h">6. Odbiorcy danych</h2>
+    <p data-i18n="pol.6p">Dane mogą być przetwarzane przez dostawców usług, z których korzystamy: poczta elektroniczna, hosting, biuro rachunkowe — wyłącznie w zakresie niezbędnym do świadczenia tych usług. Nie sprzedajemy danych i nie przekazujemy ich w celach marketingowych.</p>
 
-    <h2>7. Twoje prawa</h2>
-    <p>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia oraz wniesienia sprzeciwu.
-      Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa). Aby skorzystać z praw, napisz na kontakt@twojadomena.pl.</p>
+    <h2 data-i18n="pol.7h">7. Twoje prawa</h2>
+    <p data-i18n="pol.7p">Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia oraz wniesienia sprzeciwu. Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa). Aby skorzystać z praw, napisz na kontakt@twojadomena.pl.</p>
 
-    <a class="btn btn--ink back" href="index.html">← Wróć na stronę główną</a>
+    <a class="btn btn--ink back" href="index.html" data-keeplang data-i18n="pol.back">← Wróć na stronę główną</a>
   </div>
 </main>
+<script src="assets/js/i18n.js" defer></script>
 </body>
 </html>

@@ -21,6 +21,9 @@ const CONFIG = {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Teksty zależne od języka: słownik z assets/i18n/<kod>.js, a gdy go brak — polski domyślnik z tego pliku. */
+  const t = (key, fallback) => (window.DILA ? window.DILA.t(key, fallback) : fallback);
+  const locale = () => (window.DILA ? window.DILA.locale : "pl-PL");
 
   /* ---------- Dane z konfiguracji ---------- */
   $$('[data-cfg]').forEach((el) => {
@@ -66,7 +69,7 @@ const CONFIG = {
   }
 
   /* ---------- Demo na żywo ---------- */
-  const SCENARIOS = [
+  const SCENARIOS_PL = [
     {
       avatar: "MK", from: "Marta Kowalczyk · Agencja eventowa", meta: "dziś, 08:12", lang: "PL",
       subject: "Wycena — torby bawełniane z logo",
@@ -95,6 +98,8 @@ const CONFIG = {
     }
   ];
 
+  const scenarios = () => t("demo", SCENARIOS_PL);
+
   const demo = $("#demo");
   if (demo) {
     const el = {
@@ -110,7 +115,7 @@ const CONFIG = {
     const fmt = (s) => Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
 
     function render(i, finalState) {
-      const s = SCENARIOS[i];
+      const s = scenarios()[i];
       el.avatar.textContent = s.avatar; el.from.textContent = s.from; el.meta.textContent = s.meta;
       el.lang.textContent = s.lang; el.subject.textContent = s.subject; el.text.textContent = s.text;
       el.human.innerHTML = s.human;
@@ -126,7 +131,7 @@ const CONFIG = {
       clear();
       current = i;
       if (reduceMotion) { render(i, true); return; }
-      const s = SCENARIOS[i];
+      const s = scenarios()[i];
       el.mail.style.opacity = "0"; el.mail.style.transform = "translateY(8px)";
       render(i, false);
       later(() => { el.mail.style.opacity = "1"; el.mail.style.transform = "none"; }, 120);
@@ -143,14 +148,14 @@ const CONFIG = {
         later(() => { item.classList.remove("is-active"); item.classList.add("is-done"); }, start + k * stepMs + stepMs * 0.8);
       });
       later(() => demo.classList.add("is-ready"), total + 100);
-      later(() => { if (!paused && visible) play((current + 1) % SCENARIOS.length); }, total + 4800);
+      later(() => { if (!paused && visible) play((current + 1) % scenarios().length); }, total + 4800);
     }
 
     dots.forEach((d, k) => d.addEventListener("click", () => play(k)));
     demo.addEventListener("mouseenter", () => { paused = true; });
     demo.addEventListener("mouseleave", () => {
       paused = false;
-      if (demo.classList.contains("is-ready")) { clear(); later(() => play((current + 1) % SCENARIOS.length), 2500); }
+      if (demo.classList.contains("is-ready")) { clear(); later(() => play((current + 1) % scenarios().length), 2500); }
     });
 
     if ("IntersectionObserver" in window) {
@@ -162,6 +167,7 @@ const CONFIG = {
         });
       }, { threshold: 0.2 }).observe(demo);
     }
+    document.addEventListener("dila:lang", () => play(current));
     play(0);
   }
 
@@ -169,27 +175,28 @@ const CONFIG = {
   const calc = $("#calc");
   if (calc) {
     const q = $("#c-q"), m = $("#c-m"), r = $("#c-r");
-    const nf = new Intl.NumberFormat("pl-PL", { maximumFractionDigits: 0 });
-    const nf1 = new Intl.NumberFormat("pl-PL", { maximumFractionDigits: 1, minimumFractionDigits: 1 });
     const DAYS = 21, FTE = 168, SHARE = 0.6;
     const paint = (input) => {
       const pct = ((input.value - input.min) / (input.max - input.min)) * 100;
       input.style.setProperty("--pct", pct + "%");
     };
     function update() {
+      const nf = new Intl.NumberFormat(locale(), { maximumFractionDigits: 0 });
+      const nf1 = new Intl.NumberFormat(locale(), { maximumFractionDigits: 1, minimumFractionDigits: 1 });
       [q, m, r].forEach(paint);
       const hours = (q.value * m.value * DAYS) / 60;
       const cost = hours * r.value;
       $("#o-q").textContent = q.value;
-      $("#o-m").textContent = m.value + " min";
+      $("#o-m").textContent = m.value + " " + t("calc.min", "min");
       $("#o-r").textContent = r.value + " zł";
       $("#r-hours").textContent = nf.format(hours);
       $("#r-cost").textContent = nf.format(cost) + " zł";
       $("#r-fte").textContent = nf1.format(hours / FTE);
-      $("#r-shours").textContent = nf.format(hours * SHARE) + " h";
+      $("#r-shours").textContent = nf.format(hours * SHARE) + " " + t("calc.h", "h");
       $("#r-scost").textContent = nf.format(cost * SHARE) + " zł";
     }
     [q, m, r].forEach((i) => i.addEventListener("input", update));
+    document.addEventListener("dila:lang", update); // teksty z #r-cost itd. wróciły do HTML — przelicz od nowa
     update();
   }
 
@@ -206,19 +213,19 @@ const CONFIG = {
         return;
       }
       const v = (id) => ($("#" + id).value || "").trim();
-      const subject = `Rozmowa o automatyzacji — ${v("f-company")}`;
+      const subject = `${t("form.subject", "Rozmowa o automatyzacji")} — ${v("f-company")}`;
       const body = [
-        `Imię i nazwisko: ${v("f-name")}`,
-        `Firma: ${v("f-company")}`,
+        `${t("form.name", "Imię i nazwisko")}: ${v("f-name")}`,
+        `${t("form.company", "Firma")}: ${v("f-company")}`,
         `E-mail: ${v("f-email")}`,
-        `Telefon: ${v("f-phone") || "—"}`,
-        `Osób w zespole: ${v("f-volume")}`,
+        `${t("form.phone", "Telefon")}: ${v("f-phone") || "—"}`,
+        `${t("form.team", "Osób w zespole")}: ${v("f-volume")}`,
         "",
-        "Co zajmuje najwięcej czasu:",
+        t("form.msg", "Co zajmuje najwięcej czasu:"),
         v("f-msg") || "—"
       ].join("\n");
       window.location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      status.textContent = `Otwieramy Twój program pocztowy. Jeśli nic się nie stało, napisz bezpośrednio na ${CONFIG.email}.`;
+      status.textContent = t("form.status", "Otwieramy Twój program pocztowy. Jeśli nic się nie stało, napisz bezpośrednio na {email}.").replace("{email}", CONFIG.email);
       status.classList.add("is-visible");
     });
   }
