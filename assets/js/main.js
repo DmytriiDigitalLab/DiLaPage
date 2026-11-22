@@ -74,45 +74,45 @@ const CONFIG = {
   const SCENARIOS_PL = [
     {
       title: "skrzynka / zapytania",
-      avatar: "OG", from: "Oliver Grant · Street Food Fest, Kraków", meta: "dziś, 07:41", lang: "EN",
-      subject: "Tote bags for our festival: is this doable?",
-      text: "Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?",
+      avatar: "EC", from: "Emma Clarke · Bluebird Weddings, Gdańsk", meta: "dziś, 07:41", lang: "EN",
+      subject: "Candles as wedding favours: is this doable?",
+      text: "Hi! I am planning a wedding in Gdańsk on 20 September and we would love about 120 soy candles as guest favours, with a scent like lavender fields after rain. Problem: that scent is not on your website. Our budget is 4,500 PLN net and we need them a week before. Can you make this work?",
       steps: [
-        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">EN</span> · ~400 szt. · budżet 2&nbsp;000 zł'],
-        ["Nietypowy przypadek", "Logo tylko ze zdjęcia: czytelne, druk 1 kolor możliwy po wektoryzacji"],
-        ["Cena z cennika", '400 szt. = <span class="num">2&nbsp;080 zł</span>, ponad budżet. 380 szt. = <span class="num">1&nbsp;976 zł</span>'],
-        ["Termin", 'Realizacja 7 dni roboczych - <span class="num">zdążymy</span> z zapasem przed 14.06'],
-        ["Odpowiedź", "Wysłana po angielsku: wariant 380 szt. w budżecie, prosta wektoryzacja logo wg cennika"],
-        ["CRM", "Utworzono szansę „Street Food Fest - torby”"]
+        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">EN</span> · ~120 szt. · budżet 4&nbsp;500 zł'],
+        ["Nietypowy przypadek", "Zapachu nie ma w ofercie: najbliższy w katalogu to „Lawenda i mech”, próbka gratis"],
+        ["Cena z cennika", '120 szt. = <span class="num">4&nbsp;560 zł</span>, ponad budżet. 118 szt. = <span class="num">4&nbsp;484 zł</span>'],
+        ["Termin", 'Realizacja 10 dni roboczych - <span class="num">zdążymy</span> z zapasem przed 20.09'],
+        ["Odpowiedź", "Wysłana po angielsku: wariant 118 szt. w budżecie, zapach „Lawenda i mech” i próbka"],
+        ["CRM", "Utworzono szansę „Bluebird Weddings - świece”"]
       ],
       time: 41, human: "<b>Wysłano automatycznie</b> · kwota poniżej limitu autoodpowiedzi (5&nbsp;000 zł)", btn: "Wysłano", auto: true, warn: -1
     },
     {
       title: "skrzynka / zapytania",
-      avatar: "JW", from: "Jonas Weber · Eventagentur, Berlin", meta: "dziś, 09:03", lang: "DE",
-      subject: "Anfrage: 5.000 Silikonarmbänder mit Logo",
-      text: "Guten Tag, für unser Firmenevent im Mai benötigen wir 5.000 Silikonarmbänder mit unserem Logo in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
+      avatar: "JW", from: "Jonas Weber · Gastro-Ausstattung Weber, Berlin", meta: "dziś, 09:03", lang: "DE",
+      subject: "Anfrage: 40 Stehtische mit pulverbeschichtetem Gestell",
+      text: "Guten Tag, für die Eröffnung unserer drei neuen Filialen benötigen wir 40 Stehtische (Höhe 110 cm) mit pulverbeschichtetem Gestell in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
       steps: [
-        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">DE</span> · 5000 szt. · 2 kolory'],
-        ["Cena z cennika", '<span class="num">9&nbsp;400,00 zł</span> netto (1,88 zł/szt.)'],
+        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">DE</span> · 40 szt. · 2 kolory'],
+        ["Cena z cennika", '<span class="num">9&nbsp;400,00 zł</span> netto (235,00 zł/szt.)'],
         ["Limit autoodpowiedzi", '<span class="num">Powyżej limitu 5&nbsp;000 zł</span> - pełna obsługa zamiast wysyłki'],
-        ["Doprecyzowanie", "Zapytał klienta o Pantone, adres dostawy i termin próbki - odpowiedzi zebrane"],
+        ["Doprecyzowanie", "Zapytał klienta o kolory RAL, adresy dostawy (3 lokale) i termin - odpowiedzi zebrane"],
         ["Odpowiedź", "Kompletna oferta po niemiecku gotowa do wysłania"],
-        ["CRM", "Szansa „Armbänder 5000 - Berlin” z notatkami i danymi od klienta"]
+        ["CRM", "Szansa „Stehtische 40 - Berlin” z notatkami i danymi od klienta"]
       ],
       time: 63, human: "<b>Powyżej limitu:</b> sprawdź ofertę i wyślij", btn: "Wyślij", auto: false, warn: 2
     },
     {
       title: "zamówienia / realizacja",
-      avatar: "AL", from: "Allegro · nowe zamówienie #4817", meta: "dziś, 10:26", lang: "AUTO",
-      subject: "2× bluza z haftem logo, rozmiary M i L",
-      text: "Płatność potwierdzona. Dostawa: InPost Paczkomat. W wiadomości do zamówienia klient prosi o dodatkowy haft imienia „Kasia” na jednej z bluz.",
+      avatar: "WC", from: "WooCommerce · nowe zamówienie #4817", meta: "dziś, 10:26", lang: "AUTO",
+      subject: "2× roleta rzymska na wymiar, len szary",
+      text: "Płatność potwierdzona. Dostawa: kurier DPD. W uwagach do zamówienia klient prosi, by jedna roleta miała szerokość 87 cm zamiast standardowych 80 lub 100 cm.",
       steps: [
-        ["Rozpoznano", 'Zamówienie opłacone · 2 pozycje · <span class="num">1 personalizacja</span>'],
-        ["Zlecenie produkcyjne", "Utworzone dla hafciarni: plik haftu z imieniem, termin 3 dni"],
+        ["Rozpoznano", 'Zamówienie opłacone · 2 pozycje · <span class="num">1 wymiar niestandardowy</span>'],
+        ["Zlecenie produkcyjne", "Utworzone dla szwalni: szerokość 87 cm, tkanina z magazynu, termin 4 dni"],
         ["Faktura", "Wystawiona w Fakturowni i wysłana do klienta"],
-        ["Wysyłka", "Paczka InPost zaplanowana po zakończeniu haftu, numer śledzenia zapisany"],
-        ["Allegro", "Status zamówienia i numer śledzenia zaktualizowane"]
+        ["Wysyłka", "Paczka DPD zaplanowana po zakończeniu szycia, numer śledzenia zapisany"],
+        ["WooCommerce", "Status zamówienia i numer śledzenia zaktualizowane"]
       ],
       time: 19, human: "<b>Bez Twojej interwencji.</b> Wyjątki trafiają do kolejki", btn: "Zrealizowano", auto: true, warn: -1
     },

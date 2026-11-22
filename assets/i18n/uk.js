@@ -1,6 +1,6 @@
 /* Українська - assets/i18n/uk.js. Ключі = data-i18n з index.html та polityka-prywatnosci.html; значення можуть містити HTML. */
 (window.DILA_I18N = window.DILA_I18N || {}).uk = {
-  "meta.title": "DiLa - впровадження ШІ для бізнесу | Digital Lab",
+  "meta.title": "DiLa Digital Lab - впровадження ШІ та автоматизація для бізнесу",
   "meta.desc": "Впроваджуємо ШІ в компаніях: аудит процесів, ШІ-асистенти, інтеграції з поштою, CRM, Fakturownia і таблицями, статистика, навчання та GDPR. Поріг задаєте ви, рутину бере на себе ШІ.",
   "og.title": "ШІ, з яким команда працює ефективніше, а компанія заробляє більше - DiLa",
   "og.desc": "Від аудиту до працюючих автоматизацій: пошта, розрахунки вартості, замовлення, CRM, рахунки, статистика. Поріг задаєте ви, рутину бере на себе ШІ.",
@@ -17,7 +17,7 @@
   "nav.pricing": "Ціни",
   "nav.cta": "Записатися на розмову",
 
-  "hero.label": "Впровадження ШІ для бізнесу",
+  "hero.label": "Впровадження ШІ та автоматизація процесів для бізнесу",
   "hero.h1": "ШІ, з яким команда <em>працює ефективніше</em>, а компанія заробляє більше.",
   "hero.lead": "Починаємо з детального вивчення процесів на кожній посаді в компанії. Потім будуємо <strong>ШІ-асистентів, інтеграції та&nbsp;автоматизації</strong>, підібрані під вашу компанію: пошта, прорахунки вартості, CRM, рахунки, таблиці, статистика, виконання замовлень і контроль якості. Рутину бере на себе ШІ, а ви встановлюєте поріг: що система вирішує сама, а що йде до людини.",
   "hero.cta1": "Записатися на безкоштовну розмову",
@@ -399,45 +399,45 @@
   "demo": [
     {
       title: "скринька / запити",
-      avatar: "OG", from: "Oliver Grant · Street Food Fest, Kraków", meta: "сьогодні, 07:41", lang: "EN",
-      subject: "Tote bags for our festival: is this doable?",
-      text: "Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?",
+      avatar: "EC", from: "Emma Clarke · Bluebird Weddings, Гданськ", meta: "сьогодні, 07:41", lang: "EN",
+      subject: "Candles as wedding favours: is this doable?",
+      text: "Hi! I am planning a wedding in Gdańsk on 20 September and we would love about 120 soy candles as guest favours, with a scent like lavender fields after rain. Problem: that scent is not on your website. Our budget is 4,500 PLN net and we need them a week before. Can you make this work?",
       steps: [
-        ["Розпізнано", "Запит на розрахунок · <span class='num'>EN</span> · ~400 шт. · бюджет 2&nbsp;000 zł"],
-        ["Нестандартний випадок", "Логотип лише зі знімка: розбірливий, друк в 1 колір можливий після векторизації"],
-        ["Ціна з прайсу", "400 шт. = <span class='num'>2&nbsp;080 zł</span>, понад бюджет. 380 шт. = <span class='num'>1&nbsp;976 zł</span>"],
-        ["Термін", "Виконання 7 робочих днів - <span class='num'>встигаємо</span> із запасом до 14.06"],
-        ["Відповідь", "Надіслано англійською: варіант 380 шт. у межах бюджету, проста векторизація логотипа за прайсом"],
-        ["CRM", "Створено можливість «Street Food Fest - сумки»"]
+        ["Розпізнано", "Запит на розрахунок · <span class='num'>EN</span> · ~120 шт. · бюджет 4&nbsp;500 zł"],
+        ["Нестандартний випадок", "Аромату немає в асортименті: найближчий у каталозі «Лаванда і мох», безкоштовний зразок"],
+        ["Ціна з прайсу", "120 шт. = <span class='num'>4&nbsp;560 zł</span>, понад бюджет. 118 шт. = <span class='num'>4&nbsp;484 zł</span>"],
+        ["Термін", "Виконання 10 робочих днів - <span class='num'>встигаємо</span> із запасом до 20.09"],
+        ["Відповідь", "Надіслано англійською: варіант 118 шт. у межах бюджету, аромат «Лаванда і мох» та зразок"],
+        ["CRM", "Створено можливість «Bluebird Weddings - свічки»"]
       ],
       time: 41, human: "<b>Надіслано автоматично</b> · сума нижча за ліміт автовідповідей (5&nbsp;000 zł)", btn: "Надіслано", auto: true, warn: -1
     },
     {
       title: "скринька / запити",
-      avatar: "JW", from: "Jonas Weber · Eventagentur, Берлін", meta: "сьогодні, 09:03", lang: "DE",
-      subject: "Anfrage: 5.000 Silikonarmbänder mit Logo",
-      text: "Guten Tag, für unser Firmenevent im Mai benötigen wir 5.000 Silikonarmbänder mit unserem Logo in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
+      avatar: "JW", from: "Jonas Weber · Gastro-Ausstattung Weber, Берлін", meta: "сьогодні, 09:03", lang: "DE",
+      subject: "Anfrage: 40 Stehtische mit pulverbeschichtetem Gestell",
+      text: "Guten Tag, für die Eröffnung unserer drei neuen Filialen benötigen wir 40 Stehtische (Höhe 110 cm) mit pulverbeschichtetem Gestell in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
       steps: [
-        ["Розпізнано", "Запит на розрахунок · <span class='num'>DE</span> · 5000 шт. · 2 кольори"],
-        ["Ціна з прайсу", "<span class='num'>9&nbsp;400,00 zł</span> нетто (1,88 zł/шт.)"],
+        ["Розпізнано", "Запит на розрахунок · <span class='num'>DE</span> · 40 шт. · 2 кольори"],
+        ["Ціна з прайсу", "<span class='num'>9&nbsp;400,00 zł</span> нетто (235,00 zł/шт.)"],
         ["Ліміт автовідповідей", "<span class='num'>Понад ліміт 5&nbsp;000 zł</span> - повна обробка замість надсилання"],
-        ["Уточнення", "Запитав клієнта про Pantone, адресу доставки й термін зразка - відповіді зібрано"],
+        ["Уточнення", "Запитав клієнта про кольори RAL, адреси доставки (3 заклади) і термін - відповіді зібрано"],
         ["Відповідь", "Повна пропозиція німецькою готова до надсилання"],
-        ["CRM", "Можливість «Armbänder 5000 - Berlin» з нотатками та даними від клієнта"]
+        ["CRM", "Можливість «Stehtische 40 - Berlin» з нотатками та даними від клієнта"]
       ],
       time: 63, human: "<b>Понад ліміт:</b> перевірте пропозицію й надішліть", btn: "Надіслати", auto: false, warn: 2
     },
     {
       title: "замовлення / виконання",
-      avatar: "AL", from: "Allegro · нове замовлення #4817", meta: "сьогодні, 10:26", lang: "AUTO",
-      subject: "2× худі з вишитим логотипом, розміри M і L",
-      text: "Оплату підтверджено. Доставка: InPost Paczkomat. У повідомленні до замовлення клієнт просить додатково вишити ім'я «Kasia» на одному з худі.",
+      avatar: "WC", from: "WooCommerce · нове замовлення #4817", meta: "сьогодні, 10:26", lang: "AUTO",
+      subject: "2× римська штора на замовлення, сірий льон",
+      text: "Оплату підтверджено. Доставка: кур'єр DPD. У примітках до замовлення клієнт просить, щоб одна штора мала ширину 87 см замість стандартних 80 або 100 см.",
       steps: [
-        ["Розпізнано", "Замовлення оплачене · 2 позиції · <span class='num'>1 персоналізація</span>"],
-        ["Виробниче завдання", "Створено для вишивальні: файл вишивки з ім'ям, термін 3 дні"],
+        ["Розпізнано", "Замовлення оплачене · 2 позиції · <span class='num'>1 нестандартний розмір</span>"],
+        ["Виробниче завдання", "Створено для швейного цеху: ширина 87 см, тканина зі складу, термін 4 дні"],
         ["Рахунок", "Виставлено у Fakturownia й надіслано клієнту"],
-        ["Відправлення", "Посилку InPost заплановано після завершення вишивки, номер відстеження збережено"],
-        ["Allegro", "Статус замовлення й номер відстеження оновлено"]
+        ["Відправлення", "Посилку DPD заплановано після завершення пошиття, номер відстеження збережено"],
+        ["WooCommerce", "Статус замовлення й номер відстеження оновлено"]
       ],
       time: 19, human: "<b>Без вашого втручання.</b> Винятки потрапляють у чергу", btn: "Виконано", auto: true, warn: -1
     },

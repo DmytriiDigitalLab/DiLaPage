@@ -1,0 +1,5 @@
+# БОЕВОЙ robots.txt. При запуске: удалить текущий robots.txt и переименовать этот файл в robots.txt.
+User-agent: *
+Allow: /
+
+Sitemap: https://twojadomena.pl/sitemap.xml

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow"><!-- TEST: usunąć przed startem -->
 
-  <title data-i18n="meta.title">DiLa - Wdrożenia AI dla firm | Digital Lab</title>
+  <title data-i18n="meta.title">DiLa Digital Lab - wdrożenia AI i automatyzacja dla firm</title>
   <meta name="description" data-i18n-attr="content:meta.desc" content="Wdrażamy AI w firmach: audyt procesów, asystenci AI, integracje poczty, CRM, Fakturowni i arkuszy, statystyki, szkolenia i RODO. Ty ustawiasz próg, AI przejmuje rutynę.">
   <meta name="theme-color" content="#0f1720">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://twojadomena.pl/"><!-- TODO: domena -->
   <link rel="preload" href="assets/fonts/geologica-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/golos-text-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,6 +21,11 @@
   <meta property="og:title" data-i18n-attr="content:og.title" content="AI, z którym zespół pracuje skuteczniej, a firma zarabia więcej - DiLa">
   <meta property="og:description" data-i18n-attr="content:og.desc" content="Od audytu do działających automatyzacji: poczta, wyceny, zamówienia, CRM, faktury, statystyki. Ty ustawiasz próg, AI przejmuje rutynę.">
   <meta property="og:url" content="https://twojadomena.pl/">
+  <meta property="og:site_name" content="DiLa Digital Lab">
+  <meta property="og:image" content="https://twojadomena.pl/assets/img/og-image.png"><!-- TODO: dodać plik 1200×630 -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
   <!-- Wybrany język (nie-polski): ukryj stronę do czasu podmiany tekstów, żeby nie mignął polski. Zabezpieczenie: 2,5 s. -->
@@ -27,13 +33,45 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "DiLa - Digital Lab",
-    "description": "Wdrożenia AI dla firm: audyt procesów, asystenci AI, integracje systemów (poczta, CRM, Fakturownia, arkusze), statystyki, szkolenia zespołu, RODO i bezpieczeństwo.",
-    "areaServed": "PL",
-    "address": { "@type": "PostalAddress", "addressCountry": "PL" },
-    "email": "kontakt@twojadomena.pl",
-    "url": "https://twojadomena.pl/"
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://twojadomena.pl/#org",
+        "name": "DiLa Digital Lab",
+        "alternateName": ["DiLa", "Digital Lab"],
+        "description": "Wdrożenia AI i automatyzacja dla firm: audyt procesów, asystenci AI, integracje systemów (poczta, CRM, Fakturownia, arkusze), statystyki, szkolenia zespołu, RODO i bezpieczeństwo.",
+        "url": "https://twojadomena.pl/",
+        "email": "kontakt@twojadomena.pl",
+        "areaServed": { "@type": "Country", "name": "Polska" },
+        "address": { "@type": "PostalAddress", "addressCountry": "PL" },
+        "knowsLanguage": ["pl", "en", "uk", "ru"],
+        "knowsAbout": ["wdrożenia AI", "automatyzacja procesów", "integracje systemów", "asystenci AI", "RODO"],
+        "founder": { "@id": "https://twojadomena.pl/#founder" },
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audyt procesów pod AI" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Asystenci AI dla firm" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatyzacje i integracje systemów" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dane i statystyki" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Szkolenia zespołu i bezpieczeństwo AI" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Opieka i rozwój wdrożenia" } }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://twojadomena.pl/#founder",
+        "name": "Dmytro Honcharov",
+        "jobTitle": "Programista, założyciel DiLa",
+        "worksFor": { "@id": "https://twojadomena.pl/#org" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://twojadomena.pl/#website",
+        "url": "https://twojadomena.pl/",
+        "name": "DiLa Digital Lab",
+        "inLanguage": "pl",
+        "publisher": { "@id": "https://twojadomena.pl/#org" }
+      }
+    ]
   }
   </script>
 </head>
@@ -109,7 +147,7 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div>
-      <p class="label reveal" data-i18n="hero.label">Wdrożenia AI dla firm</p>
+      <p class="label reveal" data-i18n="hero.label">Wdrożenia AI i automatyzacja procesów dla firm</p>
       <h1 class="h1 reveal reveal-d1" data-i18n="hero.h1">AI, z którym zespół <em>pracuje skuteczniej</em>, a firma zarabia więcej.</h1>
       <p class="hero__lead reveal reveal-d2" data-i18n="hero.lead">Zaczynamy od szczegółowego poznania procesów na każdym stanowisku w firmie. Potem budujemy <strong>asystentów AI, integracje i&nbsp;automatyzacje</strong> dopasowane do Twojej firmy: poczta, wyceny, CRM, faktury, arkusze, statystyki, realizacja zamówień i kontrola jakości. AI bierze na siebie rutynę, a Ty ustawiasz próg: co system załatwia sam, a co trafia do człowieka.</p>
       <div class="hero__cta reveal reveal-d3">
@@ -134,24 +172,24 @@
         <div class="demo__body">
           <article class="mail" id="demo-mail">
             <div class="mail__head">
-              <span class="mail__avatar" id="demo-avatar">OG</span>
+              <span class="mail__avatar" id="demo-avatar">EC</span>
               <div>
-                <div class="mail__from" id="demo-from">Oliver Grant · Street Food Fest, Kraków</div>
+                <div class="mail__from" id="demo-from">Emma Clarke · Bluebird Weddings, Gdańsk</div>
                 <div class="mail__meta" id="demo-meta">dziś, 07:41</div>
               </div>
               <span class="mail__flag" id="demo-lang">EN</span>
             </div>
-            <div class="mail__subject" id="demo-subject">Tote bags for our festival: is this doable?</div>
-            <p class="mail__text" id="demo-text">Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?</p>
+            <div class="mail__subject" id="demo-subject">Candles as wedding favours: is this doable?</div>
+            <p class="mail__text" id="demo-text">Hi! I am planning a wedding in Gdańsk on 20 September and we would love about 120 soy candles as guest favours, with a scent like lavender fields after rain. Problem: that scent is not on your website. Our budget is 4,500 PLN net and we need them a week before. Can you make this work?</p>
           </article>
 
           <ol class="steps-live" id="demo-steps">
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Rozpoznano</span><br><span class="step-live__v">Zapytanie o wycenę · <span class="num">EN</span> · ~400 szt. · budżet 2&nbsp;000 zł</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Nietypowy przypadek</span><br><span class="step-live__v">Logo tylko ze zdjęcia: czytelne, druk 1 kolor możliwy po wektoryzacji</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Cena z cennika</span><br><span class="step-live__v">400 szt. = <span class="num">2&nbsp;080 zł</span>, ponad budżet. 380 szt. = <span class="num">1&nbsp;976 zł</span></span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Termin</span><br><span class="step-live__v">Realizacja 7 dni roboczych - <span class="num">zdążymy</span> z zapasem przed 14.06</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Odpowiedź</span><br><span class="step-live__v">Wysłana po angielsku: wariant 380 szt. w budżecie, prosta wektoryzacja logo wg cennika</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">CRM</span><br><span class="step-live__v">Utworzono szansę „Street Food Fest - torby”</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Rozpoznano</span><br><span class="step-live__v">Zapytanie o wycenę · <span class="num">EN</span> · ~120 szt. · budżet 4&nbsp;500 zł</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Nietypowy przypadek</span><br><span class="step-live__v">Zapachu nie ma w ofercie: najbliższy w katalogu to „Lawenda i mech”, próbka gratis</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Cena z cennika</span><br><span class="step-live__v">120 szt. = <span class="num">4&nbsp;560 zł</span>, ponad budżet. 118 szt. = <span class="num">4&nbsp;484 zł</span></span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Termin</span><br><span class="step-live__v">Realizacja 10 dni roboczych - <span class="num">zdążymy</span> z zapasem przed 20.09</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Odpowiedź</span><br><span class="step-live__v">Wysłana po angielsku: wariant 118 szt. w budżecie, zapach „Lawenda i mech” i próbka</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">CRM</span><br><span class="step-live__v">Utworzono szansę „Bluebird Weddings - świece”</span></span></li>
           </ol>
 
           <div class="demo__human">

@@ -1,6 +1,6 @@
 /* English - assets/i18n/en.js. Klucze = data-i18n z index.html i polityka-prywatnosci.html; wartości mogą zawierać HTML. */
 (window.DILA_I18N = window.DILA_I18N || {}).en = {
-  "meta.title": "DiLa - AI implementation for businesses | Digital Lab",
+  "meta.title": "DiLa Digital Lab - AI implementation and automation for businesses",
   "meta.desc": "We implement AI in businesses: process audit, AI assistants, integrations with email, CRM, Fakturownia and spreadsheets, analytics, training and GDPR. You set the threshold, AI takes over the routine.",
   "og.title": "AI that helps your team work more effectively and your company earn more - DiLa",
   "og.desc": "From an audit to working automations: email, quotes, orders, CRM, invoices, analytics. You set the threshold, AI takes over the routine.",
@@ -17,7 +17,7 @@
   "nav.pricing": "Pricing",
   "nav.cta": "Book a call",
 
-  "hero.label": "AI implementation for businesses",
+  "hero.label": "AI implementation and process automation for businesses",
   "hero.h1": "AI that helps your team <em>work more effectively</em> and your company earn more.",
   "hero.lead": "We start by studying in detail the processes of every role in the company. Then we build <strong>AI assistants, integrations and&nbsp;automations</strong> tailored to your business: email, quotes, CRM, invoices, spreadsheets, analytics, order fulfilment and quality control. AI takes over the routine, and you set the threshold: what the system handles on its own and what goes to a person.",
   "hero.cta1": "Book a free call",
@@ -399,45 +399,45 @@
   "demo": [
     {
       title: "inbox / requests",
-      avatar: "OG", from: "Oliver Grant · Street Food Fest, Kraków", meta: "today, 07:41", lang: "EN",
-      subject: "Tote bags for our festival: is this doable?",
-      text: "Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?",
+      avatar: "EC", from: "Emma Clarke · Bluebird Weddings, Gdańsk", meta: "today, 07:41", lang: "EN",
+      subject: "Candles as wedding favours: is this doable?",
+      text: "Hi! I am planning a wedding in Gdańsk on 20 September and we would love about 120 soy candles as guest favours, with a scent like lavender fields after rain. Problem: that scent is not on your website. Our budget is 4,500 PLN net and we need them a week before. Can you make this work?",
       steps: [
-        ["Recognised", "Quote request · <span class='num'>EN</span> · ~400 pcs · budget 2&nbsp;000 zł"],
-        ["Unusual case", "Logo only from a photo: legible, 1-colour print possible after vectorising"],
-        ["Price from the price list", "400 pcs = <span class='num'>2&nbsp;080 zł</span>, over budget. 380 pcs = <span class='num'>1&nbsp;976 zł</span>"],
-        ["Deadline", "Production in 7 working days - <span class='num'>we can make it</span> with room to spare before 14.06"],
-        ["Reply", "Sent in English: the 380 pcs option within budget, simple logo vectorising per the price list"],
-        ["CRM", "Created the opportunity “Street Food Fest - bags”"]
+        ["Recognised", "Quote request · <span class='num'>EN</span> · ~120 pcs · budget 4&nbsp;500 zł"],
+        ["Unusual case", "Scent not in the range: closest in the catalogue is “Lavender & Moss”, free sample"],
+        ["Price from the price list", "120 pcs = <span class='num'>4&nbsp;560 zł</span>, over budget. 118 pcs = <span class='num'>4&nbsp;484 zł</span>"],
+        ["Deadline", "Production in 10 working days - <span class='num'>we can make it</span> with room to spare before 20.09"],
+        ["Reply", "Sent in English: the 118 pcs option within budget, “Lavender & Moss” scent plus a sample"],
+        ["CRM", "Created the opportunity “Bluebird Weddings - candles”"]
       ],
       time: 41, human: "<b>Sent automatically</b> · amount below the auto-reply limit (5&nbsp;000 zł)", btn: "Sent", auto: true, warn: -1
     },
     {
       title: "inbox / requests",
-      avatar: "JW", from: "Jonas Weber · Eventagentur, Berlin", meta: "today, 09:03", lang: "DE",
-      subject: "Anfrage: 5.000 Silikonarmbänder mit Logo",
-      text: "Guten Tag, für unser Firmenevent im Mai benötigen wir 5.000 Silikonarmbänder mit unserem Logo in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
+      avatar: "JW", from: "Jonas Weber · Gastro-Ausstattung Weber, Berlin", meta: "today, 09:03", lang: "DE",
+      subject: "Anfrage: 40 Stehtische mit pulverbeschichtetem Gestell",
+      text: "Guten Tag, für die Eröffnung unserer drei neuen Filialen benötigen wir 40 Stehtische (Höhe 110 cm) mit pulverbeschichtetem Gestell in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
       steps: [
-        ["Recognised", "Quote request · <span class='num'>DE</span> · 5000 pcs · 2 colours"],
-        ["Price from the price list", "<span class='num'>9&nbsp;400.00 zł</span> net (1.88 zł/pc)"],
+        ["Recognised", "Quote request · <span class='num'>DE</span> · 40 pcs · 2 colours"],
+        ["Price from the price list", "<span class='num'>9&nbsp;400.00 zł</span> net (235.00 zł/pc)"],
         ["Auto-reply limit", "<span class='num'>Above the 5&nbsp;000 zł limit</span> - full handling instead of sending"],
-        ["Clarification", "Asked the customer about Pantone colours, delivery address and sample date - answers collected"],
+        ["Clarification", "Asked the customer about RAL colours, delivery addresses (3 venues) and the deadline - answers collected"],
         ["Reply", "Complete offer in German ready to send"],
-        ["CRM", "Opportunity “Armbänder 5000 - Berlin” with notes and the customer's details"]
+        ["CRM", "Opportunity “Stehtische 40 - Berlin” with notes and the customer's details"]
       ],
       time: 63, human: "<b>Above the limit:</b> review the offer and send", btn: "Send", auto: false, warn: 2
     },
     {
       title: "orders / fulfilment",
-      avatar: "AL", from: "Allegro · new order #4817", meta: "today, 10:26", lang: "AUTO",
-      subject: "2× hoodie with embroidered logo, sizes M and L",
-      text: "Payment confirmed. Delivery: InPost parcel locker. In the order message the customer asks for an extra embroidered name “Kasia” on one of the hoodies.",
+      avatar: "WC", from: "WooCommerce · new order #4817", meta: "today, 10:26", lang: "AUTO",
+      subject: "2× made-to-measure Roman blind, grey linen",
+      text: "Payment confirmed. Delivery: DPD courier. In the order notes the customer asks for one blind to be 87 cm wide instead of the standard 80 or 100 cm.",
       steps: [
-        ["Recognised", "Order paid · 2 items · <span class='num'>1 personalisation</span>"],
-        ["Production order", "Created for the embroidery shop: embroidery file with the name, 3 days"],
+        ["Recognised", "Order paid · 2 items · <span class='num'>1 non-standard size</span>"],
+        ["Production order", "Created for the sewing shop: width 87 cm, fabric from stock, 4 days"],
         ["Invoice", "Issued in Fakturownia and sent to the customer"],
-        ["Shipping", "InPost parcel scheduled after embroidery, tracking number saved"],
-        ["Allegro", "Order status and tracking number updated"]
+        ["Shipping", "DPD parcel scheduled after sewing, tracking number saved"],
+        ["WooCommerce", "Order status and tracking number updated"]
       ],
       time: 19, human: "<b>No intervention from you.</b> Exceptions go to the queue", btn: "Fulfilled", auto: true, warn: -1
     },

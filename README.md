@@ -48,6 +48,17 @@ site/
 
 Политику конфиденциальности перед публикацией стоит показать юристу или бухгалтеру.
 
+## SEO: чек-лист запуска (подготовлено 2026-11-22)
+Готово без домена: `title`, hero-label с ключевыми фразами, `canonical`, OG/Twitter-теги, расширенный JSON-LD (`@graph`: ProfessionalService, Person, WebSite), `sitemap.xml` (только главная), боевой `robots.launch.txt`.
+При запуске:
+1. Заменить `twojadomena.pl` на домен во всех файлах (`index.html`: canonical, og:url, og:image, JSON-LD; `sitemap.xml`; `robots.launch.txt`).
+2. Удалить `<meta name="robots" content="noindex, nofollow">` в `index.html` (строка 6). В `polityka-prywatnosci.html` `noindex` оставить.
+3. Удалить `robots.txt` и переименовать `robots.launch.txt` в `robots.txt`.
+4. Положить `assets/img/og-image.png` (1200×630).
+5. В JSON-LD добавить `sameAs` (LinkedIn) и при желании `addressLocality` (город). Город в разметке без видимого упоминания на странице Google не засчитывает, поэтому ставить его только если он есть и на сайте, и в Google Business Profile.
+6. Google Search Console и Bing Webmaster: подтвердить домен, отправить sitemap. Аналитика: Plausible или Cloudflare Web Analytics (без cookie-баннера).
+7. Потом: Google Business Profile, профили в каталогах (Aleo, Panorama Firm), узкие страницы под конкретные запросы, кейсы.
+
 ## Форма
 Сейчас форма собирает письмо и открывает почтовую программу посетителя: без сервера и без хранения данных. Чтобы получать заявки напрямую, подключите Formspree, Netlify Forms или Web3Forms: это замена обработчика `submit` в main.js. После этого обновите пункт 3 политики.
 
