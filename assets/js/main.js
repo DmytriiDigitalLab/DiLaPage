@@ -1,9 +1,9 @@
-/* DiLa — Digital Lab · main.js
+/* DiLa - Digital Lab · main.js
  * Bez zależności. Strona działa także bez JS (treść, formularz kontaktowy przez e-mail bezpośredni).
  */
 
 /* ======================================================================
-   KONFIGURACJA — jedno miejsce do podmiany danych kontaktowych.
+   KONFIGURACJA - jedno miejsce do podmiany danych kontaktowych.
    Wartości w HTML są tylko zapasowe (dla wyłączonego JS); po zmianie tutaj
    warto je też podmienić w index.html i polityka-prywatnosci.html.
    ====================================================================== */
@@ -11,7 +11,6 @@ const CONFIG = {
   name: "Dmytro Honcharov",                 // TODO: sprawdzić pisownię imienia i nazwiska
   email: "kontakt@twojadomena.pl",          // TODO: adres na własnej domenie
   phone: "+48 000 000 000",                 // TODO
-  linkedin: "https://www.linkedin.com/",    // TODO: link do profilu
   nip: "0000000000",                        // TODO
   bookingUrl: ""                            // opcjonalnie: link do Calendly / Cal.com / Google Calendar
 };
@@ -21,7 +20,7 @@ const CONFIG = {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  /* Teksty zależne od języka: słownik z assets/i18n/<kod>.js, a gdy go brak — polski domyślnik z tego pliku. */
+  /* Teksty zależne od języka: słownik z assets/i18n/<kod>.js, a gdy go brak - polski domyślnik z tego pliku. */
   const t = (key, fallback) => (window.DILA ? window.DILA.t(key, fallback) : fallback);
   const locale = () => (window.DILA ? window.DILA.locale : "pl-PL");
 
@@ -33,7 +32,6 @@ const CONFIG = {
     const label = el.querySelector("span") || el;
     if (key === "email") { el.setAttribute("href", "mailto:" + val); label.textContent = val; }
     else if (key === "phone") { el.setAttribute("href", "tel:" + val.replace(/\s+/g, "")); label.textContent = val; }
-    else if (key === "linkedin") { el.setAttribute("href", val); }
     else { el.textContent = val; }
   });
   if (CONFIG.bookingUrl) {
@@ -83,9 +81,9 @@ const CONFIG = {
         ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">EN</span> · ~400 szt. · budżet 2&nbsp;000 zł'],
         ["Nietypowy przypadek", "Logo tylko ze zdjęcia: czytelne, druk 1 kolor możliwy po wektoryzacji"],
         ["Cena z cennika", '400 szt. = <span class="num">2&nbsp;080 zł</span>, ponad budżet. 380 szt. = <span class="num">1&nbsp;976 zł</span>'],
-        ["Termin", 'Realizacja 7 dni roboczych — <span class="num">zdążymy</span> z zapasem przed 14.06'],
-        ["Odpowiedź", "Wysłana po angielsku: wariant 380 szt. w budżecie, wektoryzacja logo w cenie"],
-        ["CRM", "Utworzono szansę „Street Food Fest — torby”"]
+        ["Termin", 'Realizacja 7 dni roboczych - <span class="num">zdążymy</span> z zapasem przed 14.06'],
+        ["Odpowiedź", "Wysłana po angielsku: wariant 380 szt. w budżecie, prosta wektoryzacja logo wg cennika"],
+        ["CRM", "Utworzono szansę „Street Food Fest - torby”"]
       ],
       time: 41, human: "<b>Wysłano automatycznie</b> · kwota poniżej limitu autoodpowiedzi (5&nbsp;000 zł)", btn: "Wysłano", auto: true, warn: -1
     },
@@ -97,10 +95,10 @@ const CONFIG = {
       steps: [
         ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">DE</span> · 5000 szt. · 2 kolory'],
         ["Cena z cennika", '<span class="num">9&nbsp;400,00 zł</span> netto (1,88 zł/szt.)'],
-        ["Limit autoodpowiedzi", '<span class="num">Powyżej limitu 5&nbsp;000 zł</span> — pełna obsługa zamiast wysyłki'],
-        ["Doprecyzowanie", "Zapytał klienta o Pantone, adres dostawy i termin próbki — odpowiedzi zebrane"],
+        ["Limit autoodpowiedzi", '<span class="num">Powyżej limitu 5&nbsp;000 zł</span> - pełna obsługa zamiast wysyłki'],
+        ["Doprecyzowanie", "Zapytał klienta o Pantone, adres dostawy i termin próbki - odpowiedzi zebrane"],
         ["Odpowiedź", "Kompletna oferta po niemiecku gotowa do wysłania"],
-        ["CRM", "Szansa „Armbänder 5000 — Berlin” z notatkami i danymi od klienta"]
+        ["CRM", "Szansa „Armbänder 5000 - Berlin” z notatkami i danymi od klienta"]
       ],
       time: 63, human: "<b>Powyżej limitu:</b> sprawdź ofertę i wyślij", btn: "Wyślij", auto: false, warn: 2
     },
@@ -127,7 +125,7 @@ const CONFIG = {
         ["Odebrano", '12 zdjęć próbki · partia <span class="num">300 szt.</span>'],
         ["Porównanie", "Ze wzorem klienta: kolor, położenie, ostrość nadruku"],
         ["Odchyłka", '<span class="num">2 z 12</span> sztuk: nadruk przesunięty o 3 mm (tolerancja 1 mm)'],
-        ["Zgodnie z progiem", "Próg: więcej niż 1 odchyłka w próbce — partia wstrzymana"],
+        ["Zgodnie z progiem", "Próg: więcej niż 1 odchyłka w próbce - partia wstrzymana"],
         ["Powiadomienie", "Kierownik zmiany dostał zdjęcia z zaznaczoną odchyłką"]
       ],
       time: 23, human: "<b>Wstrzymano zgodnie z Twoim progiem:</b> sprawdź zdjęcia i zdecyduj", btn: "Zwolnij partię", auto: false, warn: 2
@@ -233,8 +231,8 @@ const CONFIG = {
   /* ---------- Kalkulator ---------- */
   const calc = $("#calc");
   if (calc) {
-    const q = $("#c-q"), m = $("#c-m"), r = $("#c-r");
-    const DAYS = 21, FTE = 168, SHARE = 0.6;
+    const p = $("#c-p"), q = $("#c-q"), m = $("#c-m"), r = $("#c-r");
+    const DAYS = 21, FTE = 168, SHARE = 0.65, MAX_ROUTINE = 0.9; // SHARE: jaką część rutyny przejmuje AI (zmień też „65%” w słownikach: calc.k2, calc.assume)
     const paint = (input) => {
       const pct = ((input.value - input.min) / (input.max - input.min)) * 100;
       input.style.setProperty("--pct", pct + "%");
@@ -242,9 +240,16 @@ const CONFIG = {
     function update() {
       const nf = new Intl.NumberFormat(locale(), { maximumFractionDigits: 0 });
       const nf1 = new Intl.NumberFormat(locale(), { maximumFractionDigits: 1, minimumFractionDigits: 1 });
-      [q, m, r].forEach(paint);
-      const hours = (q.value * m.value * DAYS) / 60;
+      [p, q, m, r].forEach(paint);
+      const perPerson = (q.value * m.value * DAYS) / 60;   // godziny rutyny na osobę miesięcznie
+      const hours = perPerson * p.value;
       const cost = hours * r.value;
+      // Wzrost wydajności: odzyskany czas idzie na pracę produktywną.
+      // f = część czasu etatu zajęta rutyną (sufit 90%), pozostała praca = 1 − f, po wdrożeniu 1 − f·(1 − SHARE).
+      const f = Math.min(MAX_ROUTINE, perPerson / FTE);
+      const mult = (1 - f * (1 - SHARE)) / (1 - f);
+      $("#o-p").textContent = p.value;
+      $("#r-mult").textContent = "×" + nf1.format(mult);
       $("#o-q").textContent = q.value;
       $("#o-m").textContent = m.value + " " + t("calc.min", "min");
       $("#o-r").textContent = r.value + " zł";
@@ -254,8 +259,8 @@ const CONFIG = {
       $("#r-shours").textContent = nf.format(hours * SHARE) + " " + t("calc.h", "h");
       $("#r-scost").textContent = nf.format(cost * SHARE) + " zł";
     }
-    [q, m, r].forEach((i) => i.addEventListener("input", update));
-    document.addEventListener("dila:lang", update); // teksty z #r-cost itd. wróciły do HTML — przelicz od nowa
+    [p, q, m, r].forEach((i) => i.addEventListener("input", update));
+    document.addEventListener("dila:lang", update); // teksty z #r-cost itd. wróciły do HTML - przelicz od nowa
     update();
   }
 
@@ -264,6 +269,17 @@ const CONFIG = {
      Aby zbierać zgłoszenia bez programu pocztowego, podłącz np. Formspree / Netlify Forms (patrz README). */
   const form = $("#contact-form");
   if (form) {
+    /* Preferowany kontakt: zaznaczony telefon wymaga numeru; zawsze musi być wybrana choć jedna opcja */
+    const prefMail = $("#f-pref-mail"), prefPhone = $("#f-pref-phone"), phone = $("#f-phone"), phoneOpt = $("#f-phone-opt");
+    const syncPhone = () => {
+      phone.required = prefPhone.checked;
+      if (phoneOpt) phoneOpt.hidden = prefPhone.checked;
+    };
+    [prefMail, prefPhone].forEach((c) => c.addEventListener("change", () => {
+      if (!prefMail.checked && !prefPhone.checked) c.checked = true; // nie pozwól odznaczyć ostatniej opcji
+      syncPhone();
+    }));
+    syncPhone();
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const status = $("#form-status");
@@ -272,16 +288,17 @@ const CONFIG = {
         return;
       }
       const v = (id) => ($("#" + id).value || "").trim();
-      const subject = `${t("form.subject", "Rozmowa o automatyzacji")} — ${v("f-company")}`;
+      const subject = `${t("form.subject", "Rozmowa o automatyzacji")}${v("f-company") ? " - " + v("f-company") : ""}`;
       const body = [
-        `${t("form.name", "Imię i nazwisko")}: ${v("f-name")}`,
-        `${t("form.company", "Firma")}: ${v("f-company")}`,
+        `${t("form.name", "Imię")}: ${v("f-name")}`,
+        `${t("form.company", "Firma")}: ${v("f-company") || "-"}`,
         `E-mail: ${v("f-email")}`,
-        `${t("form.phone", "Telefon")}: ${v("f-phone") || "—"}`,
+        `${t("form.phone", "Telefon")}: ${v("f-phone") || "-"}`,
+        `${t("form.pref", "Preferowany kontakt")}: ${[prefMail.checked && "E-mail", prefPhone.checked && t("form.phone", "Telefon")].filter(Boolean).join(", ")}`,
         `${t("form.team", "Osób w zespole")}: ${v("f-volume")}`,
         "",
         t("form.msg", "Co zajmuje najwięcej czasu:"),
-        v("f-msg") || "—"
+        v("f-msg") || "-"
       ].join("\n");
       window.location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       status.textContent = t("form.status", "Otwieramy Twój program pocztowy. Jeśli nic się nie stało, napisz bezpośrednio na {email}.").replace("{email}", CONFIG.email);

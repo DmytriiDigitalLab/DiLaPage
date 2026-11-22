@@ -1,4 +1,4 @@
-/* DiLa — Digital Lab · i18n.js
+/* DiLa - Digital Lab · i18n.js
  * Wybór języka (pl / en / uk / ru). Polski jest w samym HTML (działa bez JS i dla robotów),
  * pozostałe języki to słowniki w assets/i18n/<kod>.js, ładowane dopiero na żądanie.
  *
@@ -25,7 +25,7 @@
   var seq = 0; // chroni przed wyścigiem przy szybkim klikaniu
 
   function readStore() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
-  function writeStore(v) { try { localStorage.setItem(KEY, v); } catch (e) { /* tryb prywatny — trudno */ } }
+  function writeStore(v) { try { localStorage.setItem(KEY, v); } catch (e) { /* tryb prywatny - trudno */ } }
   function fromUrl() { try { return new URLSearchParams(location.search).get("lang"); } catch (e) { return null; } }
   function valid(l) { return typeof l === "string" && Object.prototype.hasOwnProperty.call(LANGS, l); }
 
@@ -106,7 +106,7 @@
     var my = ++seq;
     load(lang, function (ok) {
       if (my !== seq) return;
-      if (!ok) lang = "pl"; // słownik się nie wczytał — zostaje polski
+      if (!ok) lang = "pl"; // słownik się nie wczytał - zostaje polski
       if (persist) writeStore(lang);
       apply(lang);
     });

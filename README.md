@@ -36,12 +36,11 @@ site/
 | Имя и фамилия (проверить написание: сейчас **Dmytro Honcharov**) | `CONFIG.name` в main.js + футер и «O mnie» в index.html + политика |
 | Email на своём домене | `CONFIG.email` + `kontakt@twojadomena.pl` в index.html и политике (поиск и замена) |
 | Телефон | `CONFIG.phone` + index.html |
-| Ссылка на LinkedIn | `CONFIG.linkedin` + index.html |
 | NIP и адрес из CEIDG | `CONFIG.nip`, футер, политика |
 | Домен | `og:url`, JSON-LD в `<head>` |
 | **Фото** вместо монограммы «DH» | блок `about__photo` в index.html (комментарий с примером `<img>`) |
 | ~~Языки в «O mnie»~~ — исправлено по профилю LinkedIn: polski, angielski, ukraiński, rosyjski | — |
-| Цены (сейчас: wdrożenie od 8 000, opieka od 1 000 zł netto) | раздел `#cennik` + FAQ «Ile kosztuje utrzymanie» |
+| Цены (сейчас: audyt 1 500-3 000, wdrożenie od 8 000, opieka od 1 000 zł netto) | раздел `#cennik` + FAQ «Ile kosztuje utrzymanie» |
 | Хостинг в политике | `[nazwa dostawcy]` в политике |
 | OG-картинка 1200×630 для превью в LinkedIn и мессенджерах | `assets/img/og-image.png` + `<meta property="og:image">` |
 | Ссылка на запись (Calendly, Cal.com) — по желанию | `CONFIG.bookingUrl`: все кнопки «Umów rozmowę» поведут туда |
