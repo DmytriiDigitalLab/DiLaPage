@@ -69,32 +69,68 @@ const CONFIG = {
   }
 
   /* ---------- Demo na żywo ---------- */
+  /* Pola scenariusza: title (pasek okna), avatar/from/meta/lang/subject/text (karta wejścia),
+     steps (kroki), time (sekundy), human (stopka), btn (etykieta przycisku),
+     auto: true = AI wykonał wszystko sam (stopka „zrobione”), false = czeka na człowieka,
+     warn: indeks kroku wyróżnionego ostrzeżeniem (-1 = brak). Dla en/uk/ru te same pola w słownikach. */
   const SCENARIOS_PL = [
     {
-      avatar: "MK", from: "Marta Kowalczyk · Agencja eventowa", meta: "dziś, 08:12", lang: "PL",
-      subject: "Wycena — torby bawełniane z logo",
-      text: "Dzień dobry, potrzebujemy 500 toreb bawełnianych z nadrukiem logo (1 kolor) na konferencję 12 marca. Ile to będzie kosztować i czy zdążycie?",
+      title: "skrzynka / zapytania",
+      avatar: "OG", from: "Oliver Grant · Street Food Fest, Kraków", meta: "dziś, 07:41", lang: "EN",
+      subject: "Tote bags for our festival: is this doable?",
+      text: "Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?",
       steps: [
-        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">500 szt.</span> · termin 12.03'],
-        ["Cena z cennika", '<span class="num">2&nbsp;450,00 zł</span> netto (4,90 zł/szt.)'],
-        ["Termin", 'Realizacja 7 dni roboczych — <span class="num">zdążymy</span>'],
-        ["Odpowiedź", "Szkic po polsku gotowy w skrzynce"],
-        ["CRM", "Utworzono szansę „Torby 500 szt.”"]
+        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">EN</span> · ~400 szt. · budżet 2&nbsp;000 zł'],
+        ["Nietypowy przypadek", "Logo tylko ze zdjęcia: czytelne, druk 1 kolor możliwy po wektoryzacji"],
+        ["Cena z cennika", '400 szt. = <span class="num">2&nbsp;080 zł</span>, ponad budżet. 380 szt. = <span class="num">1&nbsp;976 zł</span>'],
+        ["Termin", 'Realizacja 7 dni roboczych — <span class="num">zdążymy</span> z zapasem przed 14.06'],
+        ["Odpowiedź", "Wysłana po angielsku: wariant 380 szt. w budżecie, wektoryzacja logo w cenie"],
+        ["CRM", "Utworzono szansę „Street Food Fest — torby”"]
       ],
-      time: 28, human: "<b>Twoja decyzja:</b> sprawdź szkic i wyślij", warn: -1
+      time: 41, human: "<b>Wysłano automatycznie</b> · kwota poniżej limitu autoodpowiedzi (5&nbsp;000 zł)", btn: "Wysłano", auto: true, warn: -1
     },
     {
+      title: "skrzynka / zapytania",
       avatar: "JW", from: "Jonas Weber · Eventagentur, Berlin", meta: "dziś, 09:03", lang: "DE",
-      subject: "Anfrage: 1.000 Silikonarmbänder mit Logo",
-      text: "Guten Tag, wir benötigen 1.000 Silikonarmbänder mit unserem Logo (einfarbig), Lieferung nach Berlin. Was würde das kosten?",
+      subject: "Anfrage: 5.000 Silikonarmbänder mit Logo",
+      text: "Guten Tag, für unser Firmenevent im Mai benötigen wir 5.000 Silikonarmbänder mit unserem Logo in zwei Farben, Lieferung nach Berlin. Können Sie uns ein Angebot machen?",
       steps: [
-        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">DE</span> · 1000 szt.'],
-        ["Cena z cennika", '<span class="num">2&nbsp;050,00 zł</span> netto (2,05 zł/szt.)'],
-        ["Dostawa", '<span class="num">Do handlowca:</span> koszt wysyłki do Niemiec, VAT-UE'],
-        ["Odpowiedź", "Szkic po niemiecku — bez ceny dostawy"],
-        ["CRM", "Utworzono szansę „Armbänder 1000 — Berlin”"]
+        ["Rozpoznano", 'Zapytanie o wycenę · <span class="num">DE</span> · 5000 szt. · 2 kolory'],
+        ["Cena z cennika", '<span class="num">9&nbsp;400,00 zł</span> netto (1,88 zł/szt.)'],
+        ["Limit autoodpowiedzi", '<span class="num">Powyżej limitu 5&nbsp;000 zł</span> — pełna obsługa zamiast wysyłki'],
+        ["Doprecyzowanie", "Zapytał klienta o Pantone, adres dostawy i termin próbki — odpowiedzi zebrane"],
+        ["Odpowiedź", "Kompletna oferta po niemiecku gotowa do wysłania"],
+        ["CRM", "Szansa „Armbänder 5000 — Berlin” z notatkami i danymi od klienta"]
       ],
-      time: 34, human: "<b>Oznaczono dla handlowca:</b> uzupełnij dostawę", warn: 2
+      time: 63, human: "<b>Powyżej limitu:</b> sprawdź ofertę i wyślij", btn: "Wyślij", auto: false, warn: 2
+    },
+    {
+      title: "zamówienia / realizacja",
+      avatar: "AL", from: "Allegro · nowe zamówienie #4817", meta: "dziś, 10:26", lang: "AUTO",
+      subject: "2× bluza z haftem logo, rozmiary M i L",
+      text: "Płatność potwierdzona. Dostawa: InPost Paczkomat. W wiadomości do zamówienia klient prosi o dodatkowy haft imienia „Kasia” na jednej z bluz.",
+      steps: [
+        ["Rozpoznano", 'Zamówienie opłacone · 2 pozycje · <span class="num">1 personalizacja</span>'],
+        ["Zlecenie produkcyjne", "Utworzone dla hafciarni: plik haftu z imieniem, termin 3 dni"],
+        ["Faktura", "Wystawiona w Fakturowni i wysłana do klienta"],
+        ["Wysyłka", "Paczka InPost zaplanowana po zakończeniu haftu, numer śledzenia zapisany"],
+        ["Allegro", "Status zamówienia i numer śledzenia zaktualizowane"]
+      ],
+      time: 19, human: "<b>Bez Twojej interwencji.</b> Wyjątki trafiają do kolejki", btn: "Zrealizowano", auto: true, warn: -1
+    },
+    {
+      title: "linia / kontrola jakości",
+      avatar: "KJ", from: "Linia pakowania · partia B-221", meta: "dziś, 13:15", lang: "AUTO",
+      subject: "Kubki z nadrukiem, 300 szt.",
+      text: "Zdjęcia kontrolne z linii: próbka 12 sztuk. Wzór zatwierdzony przez klienta, tolerancja położenia nadruku: 1 mm.",
+      steps: [
+        ["Odebrano", '12 zdjęć próbki · partia <span class="num">300 szt.</span>'],
+        ["Porównanie", "Ze wzorem klienta: kolor, położenie, ostrość nadruku"],
+        ["Odchyłka", '<span class="num">2 z 12</span> sztuk: nadruk przesunięty o 3 mm (tolerancja 1 mm)'],
+        ["Zgodnie z progiem", "Próg: więcej niż 1 odchyłka w próbce — partia wstrzymana"],
+        ["Powiadomienie", "Kierownik zmiany dostał zdjęcia z zaznaczoną odchyłką"]
+      ],
+      time: 23, human: "<b>Wstrzymano zgodnie z Twoim progiem:</b> sprawdź zdjęcia i zdecyduj", btn: "Zwolnij partię", auto: false, warn: 2
     }
   ];
 
@@ -105,9 +141,10 @@ const CONFIG = {
     const el = {
       avatar: $("#demo-avatar"), from: $("#demo-from"), meta: $("#demo-meta"), lang: $("#demo-lang"),
       subject: $("#demo-subject"), text: $("#demo-text"), steps: $("#demo-steps"), time: $("#demo-time"),
-      human: $("#demo-human"), mail: $("#demo-mail")
+      human: $("#demo-human"), mail: $("#demo-mail"), title: $("#demo-title"), btn: $("#demo-btn")
     };
     const dots = $$("#demo-switch button");
+    const HOLD_MS = 9600; // jak długo gotowy przykład wisi przed przejściem do następnego (było 4800)
     let current = 0, timers = [], visible = true, paused = false;
 
     const clear = () => { timers.forEach(clearTimeout); timers = []; };
@@ -119,12 +156,26 @@ const CONFIG = {
       el.avatar.textContent = s.avatar; el.from.textContent = s.from; el.meta.textContent = s.meta;
       el.lang.textContent = s.lang; el.subject.textContent = s.subject; el.text.textContent = s.text;
       el.human.innerHTML = s.human;
+      el.title.textContent = s.title; el.btn.textContent = s.btn;
+      demo.classList.toggle("is-auto", !!s.auto);
       el.steps.innerHTML = s.steps.map((st, k) =>
         `<li class="step-live${k === s.warn ? " is-warn" : ""}${finalState ? " is-done" : ""}"><span class="step-live__icon"></span><span><span class="step-live__k">${st[0]}</span><br><span class="step-live__v">${st[1]}</span></span></li>`
       ).join("");
       el.time.textContent = finalState ? fmt(s.time) : "0:00";
       demo.classList.toggle("is-ready", !!finalState);
       dots.forEach((d, k) => d.setAttribute("aria-pressed", String(k === i)));
+    }
+
+    /* Rezerwuje wysokość pod najwyższy przykład, żeby przy zmianie przykładu strona się nie przesuwała.
+       Mierzy każdy scenariusz w bieżącym języku i szerokości okna; wołać przed play(). */
+    function reserve() {
+      demo.style.minHeight = "";
+      let max = 0;
+      for (let k = 0; k < scenarios().length; k++) {
+        render(k, false);
+        max = Math.max(max, demo.offsetHeight);
+      }
+      demo.style.minHeight = max + "px";
     }
 
     function play(i) {
@@ -148,7 +199,7 @@ const CONFIG = {
         later(() => { item.classList.remove("is-active"); item.classList.add("is-done"); }, start + k * stepMs + stepMs * 0.8);
       });
       later(() => demo.classList.add("is-ready"), total + 100);
-      later(() => { if (!paused && visible) play((current + 1) % scenarios().length); }, total + 4800);
+      later(() => { if (!paused && visible) play((current + 1) % scenarios().length); }, total + HOLD_MS);
     }
 
     dots.forEach((d, k) => d.addEventListener("click", () => play(k)));
@@ -167,7 +218,15 @@ const CONFIG = {
         });
       }, { threshold: 0.2 }).observe(demo);
     }
-    document.addEventListener("dila:lang", () => play(current));
+    document.addEventListener("dila:lang", () => { reserve(); play(current); });
+    let rz, lastW = window.innerWidth; // zmiana szerokości okna zmienia zawijanie tekstu, więc wysokość liczymy od nowa (tylko przy zmianie szerokości, nie paska adresu na telefonie)
+    window.addEventListener("resize", () => {
+      if (window.innerWidth === lastW) return;
+      lastW = window.innerWidth;
+      clearTimeout(rz); rz = setTimeout(() => { reserve(); play(current); }, 250);
+    });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { reserve(); play(current); });
+    reserve();
     play(0);
   }
 

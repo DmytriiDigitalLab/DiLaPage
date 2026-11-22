@@ -109,15 +109,15 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div>
-      <p class="label reveal" data-i18n="hero.label">Wdrożenia AI dla małych i średnich firm</p>
-      <h1 class="h1 reveal reveal-d1" data-i18n="hero.h1">AI, które <em>naprawdę</em> odciąża Twój zespół.</h1>
-      <p class="hero__lead reveal reveal-d2" data-i18n="hero.lead">Zaczynamy od audytu pracy każdej osoby w firmie. Potem budujemy <strong>asystentów AI, integracje i&nbsp;automatyzacje</strong> dopasowane do Twoich procesów: poczta, wyceny, CRM, faktury, arkusze, statystyki. Rutynę przejmuje AI, decyzje zostają przy ludziach.</p>
+      <p class="label reveal" data-i18n="hero.label">Wdrożenia AI dla firm</p>
+      <h1 class="h1 reveal reveal-d1" data-i18n="hero.h1">AI, z którym zespół <em>pracuje skuteczniej</em>, a firma zarabia więcej.</h1>
+      <p class="hero__lead reveal reveal-d2" data-i18n="hero.lead">Zaczynamy od szczegółowego poznania procesów na każdym stanowisku w firmie. Potem budujemy <strong>asystentów AI, integracje i&nbsp;automatyzacje</strong> dopasowane do Twojej firmy: poczta, wyceny, CRM, faktury, arkusze, statystyki, realizacja zamówień i kontrola jakości. AI bierze na siebie rutynę, a Ty ustawiasz próg: co system załatwia sam, a co trafia do człowieka.</p>
       <div class="hero__cta reveal reveal-d3">
         <a class="btn" href="#kontakt"><span data-i18n="hero.cta1">Umów bezpłatną rozmowę</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn--ghost" href="#uslugi" data-i18n="hero.cta2">Zobacz zakres usług</a>
       </div>
       <ul class="hero__trust reveal reveal-d4">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t1">Człowiek zatwierdza ważne decyzje</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t1">Ty ustalasz, co AI robi samo, a co zatwierdza człowiek</span></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t2">Działa z Twoimi systemami</span></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="hero.t3">Zgodnie z RODO</span></li>
       </ul>
@@ -125,45 +125,48 @@
 
     <!-- Demo na żywo: animowane w main.js (teksty scenariuszy z słownika języka); bez JS pokazuje stan końcowy -->
     <div class="reveal reveal-d2">
-      <div class="demo" id="demo" aria-label="Przykład: asystent przetwarza zapytanie ofertowe" role="img" data-i18n-attr="aria-label:demo.aria">
+      <div class="demo is-auto" id="demo" aria-label="Przykłady automatyzacji: zapytanie ofertowe, zamówienie, kontrola jakości" role="img" data-i18n-attr="aria-label:demo.aria">
         <div class="demo__bar">
           <span class="demo__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="demo__title" data-i18n="demo.title">skrzynka / zapytania</span>
-          <span class="demo__timer"><span data-i18n="demo.time">czas:</span> <b id="demo-time">0:28</b></span>
+          <span class="demo__title" id="demo-title">skrzynka / zapytania</span>
+          <span class="demo__timer"><span data-i18n="demo.time">czas:</span> <b id="demo-time">0:41</b></span>
         </div>
         <div class="demo__body">
           <article class="mail" id="demo-mail">
             <div class="mail__head">
-              <span class="mail__avatar" id="demo-avatar">MK</span>
+              <span class="mail__avatar" id="demo-avatar">OG</span>
               <div>
-                <div class="mail__from" id="demo-from">Marta Kowalczyk · Agencja eventowa</div>
-                <div class="mail__meta" id="demo-meta">dziś, 08:12</div>
+                <div class="mail__from" id="demo-from">Oliver Grant · Street Food Fest, Kraków</div>
+                <div class="mail__meta" id="demo-meta">dziś, 07:41</div>
               </div>
-              <span class="mail__flag" id="demo-lang">PL</span>
+              <span class="mail__flag" id="demo-lang">EN</span>
             </div>
-            <div class="mail__subject" id="demo-subject">Wycena — torby bawełniane z logo</div>
-            <p class="mail__text" id="demo-text">Dzień dobry, potrzebujemy 500 toreb bawełnianych z nadrukiem logo (1 kolor) na konferencję 12 marca. Ile to będzie kosztować i czy zdążycie?</p>
+            <div class="mail__subject" id="demo-subject">Tote bags for our festival: is this doable?</div>
+            <p class="mail__text" id="demo-text">Hi! We're running a street food festival in Kraków on 14 June and need about 400 tote bags with our logo. Problem: all we have is a phone photo of an old sticker. Our budget is 2,000 PLN net and we need everything a few days before. Can you make this work?</p>
           </article>
 
           <ol class="steps-live" id="demo-steps">
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Rozpoznano</span><br><span class="step-live__v">Zapytanie o wycenę · <span class="num">500 szt.</span> · termin 12.03</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Cena z cennika</span><br><span class="step-live__v"><span class="num">2&nbsp;450,00 zł</span> netto (4,90 zł/szt.)</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Termin</span><br><span class="step-live__v">Realizacja 7 dni roboczych — <span class="num">zdążymy</span></span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Odpowiedź</span><br><span class="step-live__v">Szkic po polsku gotowy w skrzynce</span></span></li>
-            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">CRM</span><br><span class="step-live__v">Utworzono szansę „Torby 500 szt.”</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Rozpoznano</span><br><span class="step-live__v">Zapytanie o wycenę · <span class="num">EN</span> · ~400 szt. · budżet 2&nbsp;000 zł</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Nietypowy przypadek</span><br><span class="step-live__v">Logo tylko ze zdjęcia: czytelne, druk 1 kolor możliwy po wektoryzacji</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Cena z cennika</span><br><span class="step-live__v">400 szt. = <span class="num">2&nbsp;080 zł</span>, ponad budżet. 380 szt. = <span class="num">1&nbsp;976 zł</span></span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Termin</span><br><span class="step-live__v">Realizacja 7 dni roboczych — <span class="num">zdążymy</span> z zapasem przed 14.06</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">Odpowiedź</span><br><span class="step-live__v">Wysłana po angielsku: wariant 380 szt. w budżecie, wektoryzacja logo w cenie</span></span></li>
+            <li class="step-live is-done"><span class="step-live__icon"></span><span><span class="step-live__k">CRM</span><br><span class="step-live__v">Utworzono szansę „Street Food Fest — torby”</span></span></li>
           </ol>
 
           <div class="demo__human">
-            <span class="demo__human-text" id="demo-human"><b>Twoja decyzja:</b> sprawdź szkic i wyślij</span>
-            <span class="demo__send"><svg aria-hidden="true"><use href="#i-send"/></svg><span data-i18n="demo.send">Wyślij</span></span>
+            <span class="demo__human-text" id="demo-human"><b>Wysłano automatycznie</b> · kwota poniżej limitu autoodpowiedzi (5&nbsp;000 zł)</span>
+            <span class="demo__send"><svg aria-hidden="true"><use href="#i-send"/></svg><span id="demo-btn">Wysłano</span></span>
           </div>
         </div>
       </div>
       <div class="demo__switch" id="demo-switch" aria-label="Przykłady" data-i18n-attr="aria-label:demo.examples">
-        <button type="button" aria-pressed="true" aria-label="Przykład 1: zapytanie po polsku" data-i18n-attr="aria-label:demo.ex1"></button>
-        <button type="button" aria-pressed="false" aria-label="Przykład 2: zapytanie po niemiecku" data-i18n-attr="aria-label:demo.ex2"></button>
+        <button type="button" aria-pressed="true" aria-label="Przykład 1: zapytanie z nietypową sytuacją, odpowiedź wysłana automatycznie" data-i18n-attr="aria-label:demo.ex1"></button>
+        <button type="button" aria-pressed="false" aria-label="Przykład 2: zapytanie powyżej limitu, oferta do zatwierdzenia" data-i18n-attr="aria-label:demo.ex2"></button>
+        <button type="button" aria-pressed="false" aria-label="Przykład 3: realizacja zamówienia" data-i18n-attr="aria-label:demo.ex3"></button>
+        <button type="button" aria-pressed="false" aria-label="Przykład 4: kontrola jakości" data-i18n-attr="aria-label:demo.ex4"></button>
       </div>
-      <p class="demo__caption" data-i18n="demo.caption">Przykład: obsługa zapytania ofertowego. Dane poglądowe.</p>
+      <p class="demo__caption" data-i18n="demo.caption">Przykłady automatyzacji. Dane poglądowe.</p>
     </div>
   </div>
 </section>
@@ -171,15 +174,21 @@
 <!-- Dla kogo -->
 <div class="for-strip">
   <div class="wrap for-strip__inner">
-    <span class="for-strip__k" data-i18n="for.k">Pracujemy m.in. z branżami</span>
+    <span class="for-strip__k" data-i18n="for.k">Dla firm m.in. z branż</span>
     <ul class="for-strip__list">
-      <li data-i18n="for.1">Gadżety reklamowe</li>
-      <li data-i18n="for.2">Drukarnie</li>
-      <li data-i18n="for.3">Opakowania</li>
-      <li data-i18n="for.4">Meble i produkcja na zamówienie</li>
-      <li data-i18n="for.5">Hurtownie</li>
-      <li data-i18n="for.6">Sklepy i sprzedawcy na Allegro</li>
-      <li data-i18n="for.7">Transport i spedycja</li>
+      <li data-i18n="for.1">Produkcja i produkcja na zamówienie</li>
+      <li data-i18n="for.2">Handel hurtowy i detaliczny</li>
+      <li data-i18n="for.3">E-commerce i Allegro</li>
+      <li data-i18n="for.4">Druk, gadżety i opakowania</li>
+      <li data-i18n="for.5">Transport i logistyka</li>
+      <li data-i18n="for.6">Budownictwo i instalacje</li>
+      <li data-i18n="for.7">Agencje i usługi B2B</li>
+      <li data-i18n="for.8">Księgowość i finanse</li>
+      <li data-i18n="for.9">Nieruchomości</li>
+      <li data-i18n="for.10">Serwisy i usługi dla klientów</li>
+      <li data-i18n="for.11">Edukacja i szkolenia</li>
+      <li data-i18n="for.12">Gastronomia i hotelarstwo</li>
+      <li data-i18n="for.13">Inne</li>
     </ul>
   </div>
 </div>
@@ -191,37 +200,62 @@
       <div class="problem__intro">
         <p class="label reveal" data-i18n="pr.label">01 — Problem</p>
         <h2 class="h2 reveal reveal-d1" data-i18n="pr.h2">Zespół jest zajęty. <em>Tylko</em> nie tym, co rozwija firmę.</h2>
-        <p class="lead reveal reveal-d2" data-i18n="pr.lead">W małej firmie każdy robi kilka rzeczy naraz. Spora część dnia to rutyna: te same odpowiedzi, przepisywanie danych, szukanie informacji, przekopywanie skrzynki. A klient, który czeka, idzie do tego, kto odpowie pierwszy.</p>
-        <p class="problem__note reveal reveal-d3" data-i18n="pr.note"><strong>To nie jest wina ludzi.</strong> Oni po prostu robią ręcznie pracę, którą dziś można oddać AI. Obok: jak wygląda droga jednego zapytania ofertowego w typowej firmie.</p>
+        <p class="lead reveal reveal-d2" data-i18n="pr.lead">W każdej firmie ludzie robią kilka rzeczy naraz. Spora część dnia to rutyna: te same odpowiedzi, przepisywanie danych, szukanie informacji, przekopywanie skrzynki. A klient, który czeka, idzie do tego, kto odpowie pierwszy.</p>
+        <p class="problem__note reveal reveal-d3" data-i18n="pr.note"><strong>To nie jest wina ludzi.</strong> Oni po prostu robią to, co u konkurencji może już robić AI. Obok: droga jednego zapytania ofertowego w firmie bez automatyzacji i z nią.</p>
       </div>
 
-      <div class="timeline reveal reveal-d2" aria-label="Typowy dzień jednego zapytania" data-i18n-attr="aria-label:tl.aria">
-        <div class="timeline__head"><span data-i18n="tl.head">Przykład · jedno zapytanie ofertowe</span><span data-i18n="tl.day">wtorek</span></div>
-        <div class="tl-row">
-          <span class="tl-time">08:12</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.1t">Klient wysyła zapytanie</div><div class="tl-desc" data-i18n="tl.1d">Do Ciebie i do dwóch innych dostawców.</div></div>
+      <div class="timelines reveal reveal-d2">
+        <!-- Przykład 1: bez automatyzacji -->
+        <div class="timeline" aria-label="Droga jednego zapytania bez automatyzacji" data-i18n-attr="aria-label:tl.aria">
+          <div class="timeline__head"><span data-i18n="tl.head">Przykład 1 · bez automatyzacji</span><span data-i18n="tl.day">wtorek</span></div>
+          <div class="tl-row">
+            <span class="tl-time">08:12</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.1t">Klient wysyła zapytanie</div><div class="tl-desc" data-i18n="tl.1d">Do Ciebie i do dwóch innych dostawców.</div></div>
+          </div>
+          <div class="tl-row tl-row--rival">
+            <span class="tl-time">08:37</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.2t">Konkurencja już odpowiedziała <span class="tl-tag">z ceną</span></div><div class="tl-desc" data-i18n="tl.2d">Po 25 minutach klient ma pierwszą ofertę na stole.</div></div>
+          </div>
+          <div class="tl-row">
+            <span class="tl-time">09:30</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.3t">Handlowiec odpisuje na wczorajsze maile</div><div class="tl-desc" data-i18n="tl.3d">Nowe zapytanie czeka w kolejce.</div></div>
+          </div>
+          <div class="tl-row">
+            <span class="tl-time">11:05</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.4t">Otwiera zapytanie, szuka cennika</div><div class="tl-desc" data-i18n="tl.4d">Excel, kalkulator na stronie, wyjątki „w głowie”.</div></div>
+          </div>
+          <div class="tl-row">
+            <span class="tl-time">11:40</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.5t">Brakuje danych o nadruku</div><div class="tl-desc" data-i18n="tl.5d">Dopytuje klienta. Czeka na odpowiedź.</div></div>
+          </div>
+          <div class="tl-row tl-row--end">
+            <span class="tl-time">13:40</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="tl.6t">Oferta wysłana</div><div class="tl-desc" data-i18n="tl.6d">Klient dawno wybrał kogoś innego. Potem jeszcze przepisanie danych do CRM.</div></div>
+          </div>
+          <div class="timeline__foot"><span data-i18n="tl.f1">Czas do pierwszej odpowiedzi: <b>5 h 28 min</b></span><span data-i18n="tl.f2">Konkurencja: <b>25 min</b></span></div>
         </div>
-        <div class="tl-row tl-row--rival">
-          <span class="tl-time">08:47</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.2t">Konkurencja już odpowiedziała <span class="tl-tag">z ceną</span></div><div class="tl-desc" data-i18n="tl.2d">Klient ma pierwszą ofertę na stole.</div></div>
+
+        <!-- Przykład 2: z asystentem AI -->
+        <div class="timeline timeline--ai" aria-label="Droga jednego zapytania z asystentem AI" data-i18n-attr="aria-label:ta.aria">
+          <div class="timeline__head"><span data-i18n="ta.head">Przykład 2 · z asystentem AI</span><span data-i18n="tl.day">wtorek</span></div>
+          <div class="tl-row">
+            <span class="tl-time">08:12</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="ta.1t">Klient wysyła zapytanie</div><div class="tl-desc" data-i18n="ta.1d">Do Ciebie i do dwóch innych dostawców. Tak samo jak wcześniej.</div></div>
+          </div>
+          <div class="tl-row tl-row--ai">
+            <span class="tl-time">08:14</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="ta.2t">Asystent odpowiada sam <span class="tl-tag tl-tag--ok">z ceną</span></div><div class="tl-desc" data-i18n="ta.2d">Cena z cennika, termin, odpowiedź w języku klienta. Klient nie zdążył jeszcze przełączyć uwagi na inne sprawy.</div></div>
+          </div>
+          <div class="tl-row tl-row--ai">
+            <span class="tl-time">08:21</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="ta.3t">Klient potwierdza zamówienie</div><div class="tl-desc" data-i18n="ta.3d">9 minut po zapytaniu. Szansa w CRM, zlecenie i dane do faktury uzupełniają się same.</div></div>
+          </div>
+          <div class="tl-row tl-row--rival tl-row--end">
+            <span class="tl-time">08:37</span><span class="tl-dot"></span>
+            <div><div class="tl-title" data-i18n="ta.4t">Konkurencja dopiero odpowiada <span class="tl-tag">z ceną</span></div><div class="tl-desc" data-i18n="ta.4d">Za późno: klient złożył już zamówienie u Ciebie.</div></div>
+          </div>
+          <div class="timeline__foot"><span data-i18n="ta.f1">Czas do pierwszej odpowiedzi: <b>~2 min</b></span><span data-i18n="ta.f2">Zamówienie: <b>16 min</b> przed konkurencją</span></div>
         </div>
-        <div class="tl-row">
-          <span class="tl-time">09:30</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.3t">Handlowiec odpisuje na wczorajsze maile</div><div class="tl-desc" data-i18n="tl.3d">Nowe zapytanie czeka w kolejce.</div></div>
-        </div>
-        <div class="tl-row">
-          <span class="tl-time">11:05</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.4t">Otwiera zapytanie, szuka cennika</div><div class="tl-desc" data-i18n="tl.4d">Excel, kalkulator na stronie, wyjątki „w głowie”.</div></div>
-        </div>
-        <div class="tl-row">
-          <span class="tl-time">11:40</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.5t">Brakuje danych o nadruku</div><div class="tl-desc" data-i18n="tl.5d">Dopytuje klienta. Czeka na odpowiedź.</div></div>
-        </div>
-        <div class="tl-row tl-row--end">
-          <span class="tl-time">13:40</span><span class="tl-dot"></span>
-          <div><div class="tl-title" data-i18n="tl.6t">Oferta wysłana</div><div class="tl-desc" data-i18n="tl.6d">Potem jeszcze przepisanie danych do CRM.</div></div>
-        </div>
-        <div class="timeline__foot"><span data-i18n="tl.f1">Czas do pierwszej odpowiedzi: <b>5 h 28 min</b></span><span data-i18n="tl.f2">Z asystentem: <b>szkic w ~1 min</b></span></div>
       </div>
     </div>
 
@@ -231,36 +265,42 @@
         <svg class="pain__icon" aria-hidden="true"><use href="#i-repeat"/></svg>
         <h3 data-i18n="pain.1t">Skrzynka pełna szumu</h3>
         <p data-i18n="pain.1d">Spam, powiadomienia i te same pytania o terminy czy nakłady. Ktoś codziennie przekopuje się przez to ręcznie i odpisuje od nowa.</p>
+        <p class="pain__fix" data-i18n="pain.1f"><b>Z AI:</b> sortowanie skrzynki, odsiewanie spamu i odpowiedzi na powtarzalne pytania dzieją się automatycznie. W typowej roli to nawet do półtorej godziny pracy dziennie na każdą osobę (wartość orientacyjna, dokładną liczymy w audycie).</p>
       </article>
       <article class="pain reveal reveal-d1">
         <span class="pain__n">02</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-calc"/></svg>
         <h3 data-i18n="pain.2t">Ręczna wycena</h3>
         <p data-i18n="pain.2d">Cennik w Excelu, kalkulator na stronie, a wyjątki zna tylko jedna osoba. Każda wycena to kilkanaście minut i ryzyko pomyłki.</p>
+        <p class="pain__fix" data-i18n="pain.2f"><b>Z AI:</b> cenę liczy narzędzie oparte na Twoim cenniku, a AI przygotowuje resztę odpowiedzi. AI nie obiecuje obliczeń wolnych od błędów, ale w takich powtarzalnych zadaniach myli się wyraźnie rzadziej niż człowiek, a każdy wynik sprawdzają testy.</p>
       </article>
       <article class="pain reveal reveal-d2">
         <span class="pain__n">03</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-chart"/></svg>
         <h3 data-i18n="pain.3t">Decyzje na wyczucie</h3>
         <p data-i18n="pain.3d">Ile było zapytań w tym miesiącu? Ile ofert przepadło i dlaczego? Kto w zespole jest przeciążony? Bez liczb trudno to powiedzieć.</p>
+        <p class="pain__fix" data-i18n="pain.3f"><b>Z AI:</b> dostajesz pełną statystykę z każdego obszaru firmy: skuteczność pracy zespołu i poszczególnych ról, koszt błędów, wąskie gardła, do tego konkretne rady, co poprawić. I wszystko inne, o co zechcesz zapytać.</p>
       </article>
       <article class="pain reveal">
         <span class="pain__n">04</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-copy"/></svg>
         <h3 data-i18n="pain.4t">Przepisywanie danych</h3>
         <p data-i18n="pain.4d">Z maila do CRM, z CRM do arkusza, z arkusza do faktury. Godziny tygodniowo na pracę, która nie sprzedaje.</p>
+        <p class="pain__fix" data-i18n="pain.4f"><b>Z AI:</b> automatyzujemy wszystko, co da się zautomatyzować. Dane przechodzą z maila do CRM, arkusza i faktury same, a czas potrzebny na te same zadania wyraźnie spada.</p>
       </article>
       <article class="pain reveal reveal-d1">
         <span class="pain__n">05</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-hourglass"/></svg>
         <h3 data-i18n="pain.5t">Cisza po godzinach i po ofercie</h3>
         <p data-i18n="pain.5d">Klient pisze wieczorem i czeka do rana. Oferta wysłana, ale nikt nie ma czasu przypomnieć się po trzech dniach. Sprzedaż przepada po cichu.</p>
+        <p class="pain__fix" data-i18n="pain.5f"><b>Z AI:</b> automatyczne przypomnienia o zapomnianych klientach i obsługa korespondencji poza godzinami pracy. Klient dostaje odpowiedź wieczorem, a po trzech dniach ktoś pamięta, żeby się odezwać.</p>
       </article>
       <article class="pain reveal reveal-d2">
         <span class="pain__n">06</span>
         <svg class="pain__icon" aria-hidden="true"><use href="#i-head"/></svg>
         <h3 data-i18n="pain.6t">Wiedza w jednej głowie</h3>
         <p data-i18n="pain.6d">Gdy kluczowa osoba jest na urlopie albo chorobowym, zapytania czekają. Firma nie rośnie szybciej niż jej skrzynka.</p>
+        <p class="pain__fix" data-i18n="pain.6f"><b>Z AI:</b> dostęp do środowiska pracy nieobecnego pracownika pozwala zastępcy przejąć jego obowiązki bez większych trudności, a w niektórych przypadkach robi to w pełni automatycznie.</p>
       </article>
     </div>
   </div>
