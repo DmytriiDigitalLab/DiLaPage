@@ -261,6 +261,18 @@ const CONFIG = {
     }
     [p, q, m, r].forEach((i) => i.addEventListener("input", update));
     document.addEventListener("dila:lang", update); // teksty z #r-cost itd. wróciły do HTML - przelicz od nowa
+    const ctaBtn = $("#calc-cta");
+    if (ctaBtn) ctaBtn.addEventListener("click", () => {
+      const msg = $("#f-msg");
+      if (!msg) return;
+      const nf = new Intl.NumberFormat(locale(), { maximumFractionDigits: 0 });
+      const hours = (q.value * m.value * DAYS / 60) * p.value;
+      const line = t("calc.prefill", "Kalkulator: {p} os., {q} zadań dziennie, {m} min na zadanie, {r} zł/h - ok. {cost} zł miesięcznie ({hours} h).")
+        .replace("{p}", p.value).replace("{q}", q.value).replace("{m}", m.value).replace("{r}", r.value)
+        .replace("{cost}", nf.format(hours * r.value)).replace("{hours}", nf.format(hours));
+      if (!msg.value.trim() || msg.dataset.calc) { msg.value = line; msg.dataset.calc = "1"; }
+      msg.addEventListener("input", () => { delete msg.dataset.calc; }, { once: true });
+    });
     update();
   }
 

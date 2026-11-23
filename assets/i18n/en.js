@@ -125,6 +125,7 @@
   "calc.ord": "more work done per employee (before you have to hire another person as the company grows)",
   "calc.assume": "Assumptions: 21 working days, 168 hours per full-time job. 65% is an example value for a conversation: in your company it may come out lower, and with well-fitted processes higher. We set the exact value in the audit, on real data. We calculate the productivity gain as if the recovered time went into productive work (routine capped at 90% of a full-time job). <a href='#kontakt'>Let’s check it together →</a>",
   "calc.note": "<b>The scale does not have to be large.</b> Even 2–3 repetitive tasks a day per person means several hours of work recovered every month. Try it on the slider.",
+"calc.cta": "Let’s talk about these numbers",  "calc.prefill": "Calculator: {p} people, {q} tasks a day, {m} min per task, {r} zł/h - about {cost} zł a month ({hours} h).",
   "calc.min": "min",
   "calc.h": "h",
 
