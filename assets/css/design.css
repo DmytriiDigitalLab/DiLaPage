@@ -573,3 +573,13 @@ input[type="range"]::-moz-range-thumb { border-color: var(--blue); }
 .path__note { margin-top: 32px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .18); color: #b7c6dd; max-width: 72ch; }
 @media (max-width: 1100px) { .path__list { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .path__list { grid-template-columns: 1fr; gap: 28px; } .path { margin-bottom: 64px; } }
+
+/* Opieka: dwa poziomy */
+.tiers { margin: 22px 0 26px; display: grid; gap: 10px; }
+.tier { border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; background: #fff; }
+.tier--plus { border-color: var(--navy); background: rgba(11, 31, 59, .04); }
+.tier__head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.tier__head b { font-family: var(--f-display); font-weight: 600; font-size: 17px; }
+.tier__price { font-size: 14.5px; font-weight: 600; white-space: nowrap; }
+.tier__d { margin-top: 6px; font-size: 14px; color: var(--muted); line-height: 1.45; }
+.tier__s { font-size: 13.5px; color: var(--muted); margin-top: 2px; }

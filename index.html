@@ -753,8 +753,8 @@
       <article class="price reveal reveal-d1">
         <span class="price__k" data-i18n="pa.k">Krok 2 · jednorazowo</span>
         <h3 data-i18n="pa.t">Audyt</h3>
-        <div class="price__amount"><span class="price__value price__value--range">1&nbsp;500 - 3&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.net">netto</span></div>
-        <p class="price__desc" data-i18n="pa.d">Poznajemy procesy na każdym stanowisku, a Ty dostajesz plan z wyceną. Kwota zależy od wielkości firmy i jest w całości zaliczana na poczet wdrożenia.</p>
+        <div class="price__amount"><span class="price__from" data-i18n="pz.from">od</span><span class="price__value">1&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.net">netto</span></div>
+        <p class="price__desc" data-i18n="pa.d">Poznajemy procesy na każdym stanowisku, a Ty dostajesz plan z wyceną. Kwota zależy od liczby stanowisk i złożoności procesów i jest w całości zaliczana na poczet wdrożenia.</p>
         <ul class="price__list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pa.a">Mapa procesów i zadań do automatyzacji</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pa.b">Lista priorytetów według zysku i trudności</span></li>
@@ -784,22 +784,25 @@
       <article class="price reveal reveal-d3">
         <span class="price__k" data-i18n="pz.3k">Krok 4 · miesięcznie</span>
         <h3 data-i18n="pz.3t">Opieka i rozwój</h3>
-        <div class="price__amount"><span class="price__from" data-i18n="pz.from">od</span><span class="price__value">1&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.3u">netto / mies.</span></div>
+        <div class="price__amount"><span class="price__from" data-i18n="pz.from">od</span><span class="price__value">2&nbsp;000&nbsp;zł</span><span class="price__unit" data-i18n="pz.3u">netto / mies.</span></div>
         <p class="price__desc" data-i18n="pz.3d">Nie tylko utrzymujemy to, co zbudowane: obsługujemy wszystkie nowości na rynku AI i trzymamy system aktualnym.</p>
-        <ul class="price__list">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3a">Monitoring i poprawki</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3g">Wdrażanie nowości z rynku AI</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3b">Aktualizacje cennika i bazy wiedzy</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3c">Miesięczny raport z liczbami</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3e">Kolejne automatyzacje</span></li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="pz.3f">Wsparcie</span></li>
-        </ul>
+        <div class="tiers">
+          <div class="tier">
+            <div class="tier__head"><b data-i18n="pz.t1n">Podstawa</b><span class="tier__price"><span data-i18n="pz.from">od</span> 2&nbsp;000&nbsp;zł</span></div>
+            <p class="tier__d" data-i18n="pz.t1d">Monitoring i poprawki, aktualizacje cennika i bazy wiedzy, miesięczny raport z liczbami.</p>
+          </div>
+          <div class="tier tier--plus">
+            <div class="tier__head"><b data-i18n="pz.t2n">Rozwój</b><span class="tier__price"><span data-i18n="pz.from">od</span> 4&nbsp;000&nbsp;zł</span></div>
+            <p class="tier__d" data-i18n="pz.t2d">Wszystko z Podstawy, plus kolejne automatyzacje, nowości z rynku AI i priorytetowe wsparcie.</p>
+          </div>
+          <p class="tier__s" data-i18n="pz.ts">Zaczynasz od Podstawy. Poziom zmienisz z miesiąca na miesiąc.</p>
+        </div>
         <a class="btn btn--ink btn--block" href="#kontakt" data-i18n="pz.3cta">Zapytaj o szczegóły</a>
       </article>
     </div>
 
     <p class="pricing__note reveal"><svg aria-hidden="true"><use href="#i-info"/></svg>
-      <span data-i18n="pz.note">Koszty samych narzędzi AI (abonamenty lub API) opłacasz bezpośrednio, na kontach firmy - zwykle kilkaset złotych miesięcznie, zależnie od liczby zapytań (dokładną kwotę poznasz po audycie). Podane ceny są cenami netto, doliczamy VAT.</span></p>
+      <span data-i18n="pz.note">Koszty samych narzędzi AI (abonamenty lub API) opłacasz bezpośrednio, na kontach firmy - zwykle kilkaset złotych miesięcznie, zależnie od liczby zapytań (dokładną kwotę poznasz po audycie). Podane ceny są cenami netto, doliczamy VAT. Wszystkie ceny zależą od liczby stanowisk w firmie i złożoności potrzebnego systemu.</span></p>
 
     <div class="pilot reveal">
       <div class="pilot__seats" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -863,7 +866,7 @@
       </details>
       <details class="faq__item">
         <summary data-i18n="fq.5q">Ile kosztuje utrzymanie miesięcznie?</summary>
-        <div class="faq__a"><p data-i18n="fq.5a">Dwa składniki: opieka i rozwój (od 1&nbsp;000 zł netto miesięcznie) oraz koszt samych narzędzi AI, płacony bezpośrednio przez firmę - zwykle kilkaset złotych miesięcznie, ale przed audytem trudno podać dokładną kwotę. Opieka nie jest obowiązkowa, jednak technologie AI zmieniają się bardzo szybko, więc bez aktualizacji skuteczność systemu może szybko spadać, niezależnie od tego, co obiecują inni. Dokładną kwotę szacujemy w audycie, na podstawie liczby Twoich zapytań.</p></div>
+        <div class="faq__a"><p data-i18n="fq.5a">Dwa składniki: opieka i rozwój (od 2&nbsp;000 zł netto miesięcznie) oraz koszt samych narzędzi AI, płacony bezpośrednio przez firmę - zwykle kilkaset złotych miesięcznie, ale przed audytem trudno podać dokładną kwotę. Opieka nie jest obowiązkowa, jednak technologie AI zmieniają się bardzo szybko, więc bez aktualizacji skuteczność systemu może szybko spadać, niezależnie od tego, co obiecują inni. Dokładną kwotę szacujemy w audycie, na podstawie liczby Twoich zapytań.</p></div>
       </details>
       <details class="faq__item">
         <summary data-i18n="fq.6q">Ile trwa wdrożenie?</summary>
