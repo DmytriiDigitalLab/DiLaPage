@@ -314,7 +314,7 @@
   "pz.3a": "Monitoring and fixes", "pz.3b": "Updates of the price list and knowledge base", "pz.3c": "Monthly report with numbers",
   "pz.3e": "More automations", "pz.3f": "Support", "pz.3g": "New AI developments rolled in",
   "pz.3cta": "Ask for details",
-"pz.t1n": "Basic", "pz.t1d": "Monitoring and fixes, updates of the price list and knowledge base, monthly report with numbers.",  "pz.t2n": "Growth", "pz.t2d": "Everything in Basic, plus further automations, new AI developments and priority support.",  "pz.ts": "You start with Basic. You can switch level month to month.",
+"pz.t1n": "Basic", "pz.t1d": "Monitoring and fixes, updates of the price list and knowledge base, monthly report with numbers.",  "pz.t2n": "Growth", "pz.t2d": "Everything in Basic, plus further automations, new AI developments and priority support.",  "pz.ts": "You can switch level month to month.",
   "pz.note": "The cost of the AI tools themselves (subscriptions or API) is paid directly by you, on company accounts - usually a few hundred zloty a month, depending on the number of requests (you learn the exact figure after the audit). Prices are net, we add VAT. All prices depend on the number of positions in the company and the complexity of the system required.",
   "pz.pk": "Pilot programme · several companies",
   "pz.pt": "Preferential terms for the first implementations",
